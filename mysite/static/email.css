@@ -1,0 +1,58 @@
+/* email.css */
+
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.mail__container {
+    width: 700px;
+    height: 900px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg, #5B86E5, #36D1DC);
+}
+
+.mail__title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+
+.title {
+    margin-bottom: 100px;
+    border-bottom: 1px solid #fff;
+}
+
+.mail__p {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+
+#mail__redirect {
+    margin-top: 300px;
+}
+
+#mail__submit {
+    height: 40px;
+    width: 120px;
+    border: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #464646;
+    background-color: rgba(255, 255, 255, 0.7);
+}

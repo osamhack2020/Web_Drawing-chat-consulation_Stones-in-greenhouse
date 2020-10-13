@@ -1,0 +1,26 @@
+#header {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #36D1DC, #5B86E5);
+}
+
+.header__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header__logo {
+    margin-bottom: 10px;
+    font-family: 'Gugi', cursive;
+    font-size: 44px;
+    color: #fff;
+}
+
+#header__logo-eng {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+}

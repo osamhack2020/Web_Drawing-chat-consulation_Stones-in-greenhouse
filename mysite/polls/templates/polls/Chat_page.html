@@ -1,0 +1,279 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--스타일-->
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/styles.css' %}"/>
+        <!--font awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css" integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q" crossorigin="anonymous">
+        <title>비대면 상담 체계 || 홈</title>
+    </head>
+    <body>
+        <main id="chat">
+            <div class="chat__wrapper">
+                <div id="chat__sidemenu">
+                    <div id="userinfo">
+                        <i class="fas fa-user-circle"></i>
+                        <p class="userinfo__title">계정</p>
+                    </div>
+                    <div id="counstate" class="inactive">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <p class="countstate__title">상담관</p>
+                    </div>
+                    <div id="counlog" class="inactive">
+                        <i class="fas fa-clipboard"></i>
+                        <p class="counlog__title">상담 로그</p>
+                    </div>
+                </div>
+                <div id="chat__side">
+                    <div id="side__userinfo">
+                        <div class="userinfo__name">
+                            <p>{{ name }}</p>
+                        </div>
+                        <div class="userinfo__id">
+                            <p>{{ id }}</p>
+                        </div>
+                        <div class="userinfo__affi">
+                            <p>{{ affi }}</p>
+                        </div>
+                        <a href="account.html" class="userinfo__mod">계정 정보 변경</a>
+                    </div>
+                    <div id="side__counstate" class="vanish">
+                        <div class="counstate__img">
+                            <img src="{% static 'polls/chat_side_test.jpg' %}" id="coun__img">
+                        </div>
+                        <div class="counstate__name">
+                            <h1>상담관</h1>
+                            <p>{{ counname }}</p>
+                        </div>
+                        <div class="counstate__affi">
+                            <p>{{ affi }}</p>
+                        </div>
+                        <div class="counstate__state">
+                            <p>{{ state }}</p>
+                            <div id="counstate__alarm-g"></div>
+                            <div id="counstate__alarm-y" class="vanish"></div>
+                            <div id="counstate__alarm-r" class="vanish"></div>
+                        </div>
+                    </div>
+                    <div id="side__counlog" class="vanish">
+                        <!--상담 로그 조회-->
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <!--test-->
+                    </div>
+                </div>
+                <div class="chat__home">
+                    <header class="chat__header">
+                        <div class="header__title">
+                            <i class="fas fa-angle-double-right"></i>
+                            <div class="header__wait">
+                                <p>비대면 상담 체계</p>
+                            </div>
+                            <div class="header__ready vanish">
+                                <p>상담 준비 중...</p>
+                            </div>
+                            <div class="header__chating vanish">
+                                <p>상담관과 연결 되었습니다.</p>
+                            </div>
+                            <div class="header__log vanish">
+                                <p>상담 로그 조회</p>
+                            </div>
+                        </div>
+                        <div class="header__control">
+                            <button id="coun__ready">상담 시작</button>
+                            <button id="coun__finish" class="vanish">상담 종료</button>
+                        </div>
+                    </header>
+                    <div class="chat__main">
+                        <div id="chat__container">
+                            <div id="chat__chats">
+                                <!--채팅 메시지 영역-->
+                                <div class="chats__block-receive">
+                                    <p>채팅 내용을 받는 부분 인정 어 인정 ㄴㅁㄴㅁㄻㄴㄹㄴㅁㄻㄴㄹㄴㅁㄻㄴㄻㄴㄹㄴㅁㄻㄴㄻㄴㄻㄴㄻㄴㄴㅁㄻㄴㄹ</p>
+                                </div>
+                                <div class="chats__block-send">
+                                    <p>채팅 내용 맥스 위드를 체크하기 위한 쓸모 없이 긴 글ㄴㅁㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㅇㄴㅁㄴㅇㅁㄴㅇㅁㅇㄴ</p>
+                                </div>
+                                <div class="chats__block-receive">
+                                    <p>채팅 내용을 받는 부분 인정 어 인정 ㄴㅁㄴㅁㄻㄴㄹㄴㅁㄻㄴㄹㄴㅁㄻㄴㄻㄴㄹㄴㅁㄻㄴㄻㄴㄻㄴㄻㄴㄴㅁㄻㄴㄹ</p>
+                                </div>
+                                <div class="chats__block-send">
+                                    <p>채팅 내용 맥스 위드를 체크하기 위한 쓸모 없이 긴 글ㄴㅁㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㅇㄴㅁㄴㅇㅁㄴㅇㅁㅇㄴ</p>
+                                </div>
+                                <div class="chats__block-receive">
+                                    <p>채팅 내용을 받는 부분 인정 어 인정 ㄴㅁㄴㅁㄻㄴㄹㄴㅁㄻㄴㄹㄴㅁㄻㄴㄻㄴㄹㄴㅁㄻㄴㄻㄴㄻㄴㄻㄴㄴㅁㄻㄴㄹ</p>
+                                </div>
+                                <div class="chats__block-send">
+                                    <p>채팅 내용 맥스 위드를 체크하기 위한 쓸모 없이 긴 글ㄴㅁㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㅇㄴㅁㄴㅇㅁㄴㅇㅁㅇㄴ</p>
+                                </div>
+                                <div class="chats__block-receive">
+                                    <p>채팅 내용을 받는 부분 인정 어 인정 ㄴㅁㄴㅁㄻㄴㄹㄴㅁㄻㄴㄹㄴㅁㄻㄴㄻㄴㄹㄴㅁㄻㄴㄻㄴㄻㄴㄻㄴㄴㅁㄻㄴㄹ</p>
+                                </div>
+                                <div class="chats__block-send">
+                                    <p>채팅 내용 맥스 위드를 체크하기 위한 쓸모 없이 긴 글ㄴㅁㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㅇㄴㅁㄴㅇㅁㄴㅇㅁㅇㄴ</p>
+                                </div>
+                                <div class="chats__block-receive">
+                                    <p>채팅 내용을 받는 부분 인정 어 인정 ㄴㅁㄴㅁㄻㄴㄹㄴㅁㄻㄴㄹㄴㅁㄻㄴㄻㄴㄹㄴㅁㄻㄴㄻㄴㄻㄴㄻㄴㄴㅁㄻㄴㄹ</p>
+                                </div>
+                                <div class="chats__block-send">
+                                    <p>채팅 내용 맥스 위드를 체크하기 위한 쓸모 없이 긴 글ㄴㅁㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㅇㄴㅁㄴㅇㅁㄴㅇㅁㅇㄴ</p>
+                                </div>
+                                <div class="chats__block-receive">
+                                    <p>채팅 내용을 받는 부분 인정 어 인정 ㄴㅁㄴㅁㄻㄴㄹㄴㅁㄻㄴㄹㄴㅁㄻㄴㄻㄴㄹㄴㅁㄻㄴㄻㄴㄻㄴㄻㄴㄴㅁㄻㄴㄹ</p>
+                                </div>
+                                <div class="chats__block-send">
+                                    <p>채팅 내용 맥스 위드를 체크하기 위한 쓸모 없이 긴 글ㄴㅁㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㅇㄴㅁㄴㅇㅁㄴㅇㅁㅇㄴ</p>
+                                </div>
+                                <div class="chats__block-receive">
+                                    <p>채팅 내용을 받는 부분 인정 어 인정 ㄴㅁㄴㅁㄻㄴㄹㄴㅁㄻㄴㄹㄴㅁㄻㄴㄻㄴㄹㄴㅁㄻㄴㄻㄴㄻㄴㄻㄴㄴㅁㄻㄴㄹ</p>
+                                </div>
+                                <div class="chats__block-send">
+                                    <p>채팅 내용 맥스 위드를 체크하기 위한 쓸모 없이 긴 글ㄴㅁㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㅇㄴㅁㄴㅇㅁㄴㅇㅁㅇㄴ</p>
+                                </div>
+                                <!--test-->
+                            </div>
+                            <div id="chat__control">
+                                <!--채팅 입력-->
+                                <input type="text" name="chatInput" id="chat__input">
+                                <div class="chat__sendbutton">
+                                    <i class="fas fa-arrow-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chat__mainmenu">
+                            <!--채팅 중 각종 기능-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="{% static 'polls/jQuery_3.5.1.js' %} "></script>
+        <script src="{% static 'polls/chat_flow.js' %} "></script>
+        <script src="{% static 'polls/chat_chating.js' %} "></script>
+    </body>
+</html>
