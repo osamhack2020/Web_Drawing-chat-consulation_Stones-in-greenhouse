@@ -1,9 +1,9 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=150&section=header&text=&fontSize=90&fontAlignY=30&)
 
-# (Reame 수정중) (90%)
-# Front, Backend 작업중 (85%)
-# Gitbook 수정중 (90%)
-# PPT 제작중 (10%)
+### (Reame 수정중) (90%)
+### Front, Backend 작업중 (85%)
+### Gitbook 수정중 (90%)
+### PPT 제작중 (10%)
 
 # 온실 속 돌멩이 
 
