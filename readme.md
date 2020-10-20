@@ -4,7 +4,7 @@
  
 # 온실 속 돌멩이
 
-<h3><p align="center"><img src="./stone.png"><p align="center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/">📘 Gitbook</a></p>
+<h3><p align="center"><img src="./image_for_read-me/stone.png"><p align="center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/">📘 Gitbook</a></p>
  <p align="center"><a href="www.youtube.com">🎬 PJ Video</a></p></p></h3>
 
 
@@ -20,11 +20,11 @@
 
 <h4><p align="left">&nbsp&nbsp&nbspFrontend</p></h4>
 
-<p align="left"> <img src="./htmljsscss.png"> </p> 
+<p align="left"> <img src="./image_for_read-me/htmljsscss.png"> </p> 
 <h2></h2>
 <h4><p align="right">Backend&nbsp</p></h4>
 
-<p align="right">&nbsp&nbsp&nbsp<img src="./backend_png.png"> </p>
+<p align="right">&nbsp&nbsp&nbsp<img src="./image_for_read-me/backend_png.png"> </p>
 <br></br>
 
 ## 설치 안내 (Installation Process)
