@@ -1,8 +1,11 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=150&section=header&text=&fontSize=90&fontAlignY=30&)
 
- 
- 
-# 온실 속 돌멩이
+# (Reame 수정중) (90%)
+# Front, Backend 작업중 (85%)
+# Gitbook 수정중 (90%)
+# PPT 제작중 (10%)
+
+# 온실 속 돌멩이 
 
 <h3><p align="center"><img src="./image_for_read-me/stone.png"><p align="center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/">📘 Gitbook</a></p>
  <p align="center"><a href="www.youtube.com">🎬 PJ Video</a></p></p></h3>
