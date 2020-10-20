@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--스타일-->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+        <!--font awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css" integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q" crossorigin="anonymous">
+        <title>비대면 상담 체계 || 상담관 홈</title>
+    </head>
+    <body>
+        <main id="chat">
+            <div class="chat__wrapper">
+                <div id="chat__sidemenu">
+                    <div id="couninfo">
+                        <i class="fas fa-user-circle"></i>
+                        <p class="userinfo__title">계정</p>
+                    </div>
+                    <div id="counlog-coun" class="inactive">
+                        <i class="fas fa-clipboard"></i>
+                        <p class="counlog__title">상담 로그</p>
+                    </div>
+                </div>
+                <div id="chat__side">
+                    <div id="side__couninfo">
+                        <div class="counstate__img">
+                            <img src="{% static 'img/chat_side_test.jpg' %}" id="coun__img">
+                        </div>
+                        <div class="couninfo__name">
+                            <p>{{ name }}</p>
+                        </div>
+                        <div class="couninfo__affi">
+                            <p>{{ affi }}</p>
+                        </div>
+                        <div id="couninfo__counready">상담 대기 중</div>
+                        <div id="couninfo__counrest" class="vanish">자리 비움</div>
+                        <div id="couninfo__couning" class="vanish">상담 중</div>
+                        <div id="logout">
+                            <p>로그아웃</p>
+                        </div>
+                    </div>
+                    <div id="side__counlog-coun" class="vanish">
+                        <!--상담 로그 조회-->
+                        <div class="counlog__block">
+                            <h1>{{ date }}자 로그</h1>
+                            <p>{{ counname }} 상담관 </p>
+                        </div>
+                        <!--test-->
+                    </div>
+                </div>
+                <div class="chat__home">
+                    <header class="chat__header">
+                        <div class="header__title">
+                            <i class="fas fa-angle-double-right"></i>
+                            <div id="header-coun__wait">
+                                <p>비대면 상담 체계</p>
+                            </div>
+                            <div id="header-coun__receive" class="vanish">
+                                <p>상담이 연결되었습니다.</p>
+                            </div>
+                            <div id="header-coun__ending" class="vanish">
+                                <p>상담 종료 중...</p>
+                            </div>
+                            <div id="header__log" class="vanish">
+                                <p>상담 로그 조회</p>
+                            </div>
+                        </div>
+                        <div class="header__control">
+                            <button id="coun__online">온라인</button>
+                            <button id="coun__finish" class="vanish">상담 종료</button>
+                        </div>
+                    </header>
+                    <div class="chat__main">
+                        <div id="chat__container">
+                            <div id="chat__chats">
+                                <!--채팅 메시지 영역-->
+                            </div>
+                            <div id="chat__control">
+                                <!--채팅 입력-->
+                                <input type="text" name="chatInput" id="chat__input">
+                                <div id="chat__sendbutton">
+                                    <i class="fas fa-arrow-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chat__mainmenu">
+                            <!--채팅 중 각종 기능-->
+                        </div>
+                    </div>
+                </div>
+                <div id="chat__modal" class="vanish">
+                    <div class="modal__container">
+                        <div id="modal__backtomain">상담 시작</div>
+                        <div id="modal__contents">
+                            <div class="modal_box">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+        <script src="{% static 'js/jQuery_3.5.1.js' %}"></script>
+        <script src="{% static 'js/chat_flow.js' %}"></script>
+        <script src="{% static 'js/chat_chatbox.js' %}"></script>
+        <script src="{% static 'js/chat_counseler_chating.js' %}"></script>
+        <script src="{% static 'js/chat_counseler_flow.js' %}"></script>
+    </body>
+</html>

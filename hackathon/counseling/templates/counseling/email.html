@@ -1,0 +1,35 @@
+<!--이메일-->
+
+{% load inlinecss %}
+
+{% inlinecss "email.css" %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Email</title>
+        <link rel="stylesheet" type="text/css" href="css/email.css"/>
+    </head>
+    <body>
+        <div class="mail__container">
+            <div class="title">
+                <h1 class="mail__title">
+                    "비대면 상담 체계" 서비스 회원가입 이메일 인증이 요청되었습니다.
+                </h1>
+                
+            </div>
+            <div class="p">
+                <p class="mail__p">
+                    {{ email }} 을 사용해 회원가입을 신청하신 것이 맞다면<br>아래의 "인증 완료" 버튼을 눌러 회원가입을 완료해주세요!
+                </p>
+            </div>
+            <form action="redirect" id="mail__redirect" method="post">
+                <input type="submit" id="mail__submit" value="인증 완료">
+            </form>
+        </div>
+    </body>
+</html>
+
+{% endinlinecss %}

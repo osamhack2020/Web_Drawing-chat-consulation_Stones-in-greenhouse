@@ -1,0 +1,76 @@
+.couninfo__name {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.couninfo__affi {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 70%;
+    margin-bottom: 20px;
+}
+
+#couninfo__counready, #couninfo__counrest, #couninfo__couning {
+    box-sizing: border-box;
+    height: 40px;
+    width: 160px;
+    margin: 20px 0;
+    padding: 11px 0px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#logout {
+    height: 25px;
+    width: 90px;
+    margin: 0 auto;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+#side__counlog-coun {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#side__counlog-coun::-webkit-scrollbar {
+    width: 1px;
+    background-color: transparent;
+}
+
+#side__counlog-coun::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.counlog-coun__block {
+    width: 160px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.counlog-coun__block > h1 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.counlog-coun__block > p {
+    font-size: 8px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
