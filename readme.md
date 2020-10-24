@@ -62,8 +62,6 @@ Team|주세훈|Backend|fjdksl546@gmail.com|fjdksl546
 
 <img src="https://img.shields.io/github/license/osamhack2020/Web_Chat-consulation_Stones-in-greenhouse">
 
-### - [MIT License](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
-
 ```bash
 MIT License
 
