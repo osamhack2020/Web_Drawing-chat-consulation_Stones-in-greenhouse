@@ -48,19 +48,63 @@ $ yarn start or npm run start
 
 
 ## Team Information
-Team|Name|Position|E-Mail|Github id
----|---|---|---|---
-Leader|한준규|Manager, Backend|must1080@naver.com|doongu
-Team|신동현|Frontend|donghyeonsheen@gmail.com|donghyeonsheen
-Team|강경태|Frontend|rkdrudxo0804@naver.com|Heuttun
-Team|주세훈|Backend|fjdksl546@gmail.com|
 
-<a href="https://alpox.kr">
 
-<img 
-        src="http://img.shields.io/badge/-Tech%20Blog-655ced?style=flat&logo=github&link=https://alpox.kr"
-        style="height : auto; margin-left : 10px; margin-right : 10px;"/>
-</a>
+<!--  아래는 Team INFORMATION 표-->
+ 
+ <table>
+<thead>
+<tr>
+<th style="text-align:left">Team</th>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Position</th>
+<th style="text-align:left">E-Mail</th>
+<th style="text-align:left">Github</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Leader</td>
+<td style="text-align:left">한준규</td>
+<td style="text-align:left">Manager, Backend</td>
+<td style="text-align:left">must1080@naver.com</td>
+<td style="text-align:left"><a href="https://alpox.kr">
+<img src="http://img.shields.io/badge/-Tech%20Blog-655ced?style=flat&logo=github&link=https://alpox.kr" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Team</td>
+<td style="text-align:left">신동현</td>
+<td style="text-align:left">Frontend</td>
+<td style="text-align:left">donghyeonsheen@gmail.com</td>
+<td style="text-align:left"><a href="https://alpox.kr">
+<img src="http://img.shields.io/badge/-Tech%20Blog-655ced?style=flat&logo=github&link=https://alpox.kr" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Team</td>
+<td style="text-align:left">강경태</td>
+<td style="text-align:left">Frontend</td>
+<td style="text-align:left">rkdrudxo@naver.com</td>
+<td style="text-align:left"><a href="https://alpox.kr">
+<img src="http://img.shields.io/badge/-Tech%20Blog-655ced?style=flat&logo=github&link=https://alpox.kr" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Team</td>
+<td style="text-align:left">주세훈</td>
+<td style="text-align:left">Backend</td>
+<td style="text-align:left">fjdksl546@gmail.com</td>
+<td style="text-align:left"><a href="https://alpox.kr">
+<img src="http://img.shields.io/badge/-Tech%20Blog-655ced?style=flat&logo=github&link=https://alpox.kr" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
 
 <br></br>
 
