@@ -19,7 +19,7 @@
 - [x] python 3.8
 - [x] django 3.1.1
 - [x] django 내장 sql (sqllite3)
-- [x] django-inlinecss 0.3.0
+- [x] django-inlinecss 0.3.0 (설치 후 INSTALLED_APPS에 'django_inlinecss' 추가)
 
 
 ## 기술 스택 (Technique Used)
@@ -41,6 +41,7 @@ $ yarn start or npm run start
 ```
 <br></br>
 ## 프로젝트 사용법 (Getting Started)
+
 
 - [x] 채팅하는 서비스이기 때문에 다른 IP의 PC 두대를 이용 해야합니다.
 - [x] 예를 들어 A라는 부대로 회원가입을 했다면, A부대에 근무하는 상담관의 아이디로 로그인해야 TEST가 가능합니다.
