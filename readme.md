@@ -68,8 +68,8 @@ $ yarn start or npm run start
 <td style="text-align:left">한준규</td>
 <td style="text-align:left">Manager, Backend</td>
 <td style="text-align:left">must1080@naver.com</td>
-<td style="text-align:left"><a href="https://alpox.kr">
-<img src="http://img.shields.io/badge/-Tech%20Blog-655ced?style=flat&logo=github&link=https://alpox.kr" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+<td style="text-align:left"><a href="https://github.com/doongu">
+<img src="http://img.shields.io/badge/doongu-655ced?style=flat&logo=github&link=https://alpox.kr" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
 </a></td>
 </tr>
 <tr>
