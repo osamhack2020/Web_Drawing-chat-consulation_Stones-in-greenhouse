@@ -15,6 +15,7 @@
 
  ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 - [x] chrome 86.0.4240.111ver 권장
+- [x] Ubuntu 18.04 권장
 - [x] python 3.8
 - [x] django 3.1.1
 - [x] django 내장 sql (sqllite3)
