@@ -58,7 +58,9 @@ Team|주세훈|Backend|fjdksl546@gmail.com|fjdksl546
 <br></br>
 
 <h2>Copyleft / End User License</h2>
+
 https://img.shields.io/github/license/osamhack2020/Web_Chat-consulation_Stones-in-greenhouse
+
 ### - [MIT License](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
 
 ```bash
