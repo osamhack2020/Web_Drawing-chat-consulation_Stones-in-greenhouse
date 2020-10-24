@@ -59,7 +59,7 @@ Team|주세훈|Backend|fjdksl546@gmail.com|fjdksl546
 
 <h2>Copyleft / End User License</h2>
 
-<a href="https://stones-in-greenhouse.gitbook.io/army-web-service/"><img alt="GitHub" src="https://img.shields.io/github/license/osamhack2020/Web_Chat-consulation_Stones-in-greenhouse"></a>
+<a href="https://github.com/osamhack2020/Web_Chat-consulation_Stones-in-greenhouse/blob/master/license.md"><img alt="GitHub" src="https://img.shields.io/github/license/osamhack2020/Web_Chat-consulation_Stones-in-greenhouse"></a>
 
 ```bash
 MIT License
