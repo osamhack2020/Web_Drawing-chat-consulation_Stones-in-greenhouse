@@ -44,6 +44,7 @@ $ yarn start or npm run start
 - [x] 채팅하는 서비스이기 때문에 다른 IP의 PC 두대를 이용 해야합니다.
 - [x] 예를 들어 A라는 부대로 회원가입을 했다면, A부대에 근무하는 상담관의 아이디로 로그인해야 TEST가 가능합니다.
 
+
 ## Team Information
 Team|Name|Position|E-Mail|Github id
 ---|---|---|---|---
