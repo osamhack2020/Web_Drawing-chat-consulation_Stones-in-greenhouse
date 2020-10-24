@@ -53,7 +53,11 @@ Team|Name|Position|E-Mail|Github id
 Leader|한준규|Manager, Backend|must1080@naver.com|doongu
 Team|신동현|Frontend|donghyeonsheen@gmail.com|donghyeonsheen
 Team|강경태|Frontend|rkdrudxo0804@naver.com|Heuttun
-Team|주세훈|Backend|fjdksl546@gmail.com|fjdksl546
+Team|주세훈|Backend|fjdksl546@gmail.com|<a href="https://alpox.kr">
+    <img 
+        src="http://img.shields.io/badge/-Tech%20Blog-655ced?style=flat&logo=github&link=https://alpox.kr"
+        style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+</a>
 
 <br></br>
 
@@ -86,9 +90,5 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
 ![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=150&section=footer&fontSize=90)
 
 
-<a href="https://alpox.kr">
-    <img 
-        src="http://img.shields.io/badge/-Tech%20Blog-655ced?style=flat&logo=github&link=https://alpox.kr"
-        style="height : auto; margin-left : 10px; margin-right : 10px;"/>
-</a>
+
 
