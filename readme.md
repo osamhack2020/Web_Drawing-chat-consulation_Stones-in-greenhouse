@@ -40,15 +40,9 @@ $ yarn start or npm run start
 ```
 <br></br>
 ## 프로젝트 사용법 (Getting Started)
-**마크다운 문법을 이용하여 자유롭게 기재**
 
-잘 모를 경우
-구글 검색 - 마크다운 문법
-[https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017](https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017)
-
- 편한 마크다운 에디터를 찾아서 사용
- 샘플 에디터 [https://stackedit.io/app#](https://stackedit.io/app#)
-<br></br>
+####채팅하는 서비스이기 때문에 다른 IP의 PC 두대를 이용 해야합니다.
+####예를 들어 A라는 부대로 회원가입을 했다면, A부대에 근무하는 상담관의 아이디로 로그인해야 TEST가 가능합니다.
 
 ## Team Information
 Team|Name|Position|E-Mail|Github id
