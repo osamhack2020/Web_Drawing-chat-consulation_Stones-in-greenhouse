@@ -19,7 +19,7 @@
 - [x] python 3.8
 - [x] django 3.1.1
 - [x] django 내장 sql (sqllite3)
-- [x] django-inlinecss
+- [x] django-inlinecss 0.3.0
 
 
 ## 기술 스택 (Technique Used)
