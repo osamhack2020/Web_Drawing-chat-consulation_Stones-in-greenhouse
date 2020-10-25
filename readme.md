@@ -8,7 +8,8 @@
  <p align="center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📘 Gitbook&nbsp;</a> <a href="www.youtube.com">&nbsp;🖥 WebPage</a></p>
 
  <p align="center"><a href="www.youtube.com">🎬 PJ Video</a> <a href="www.youtube.com"> &nbsp; 🎞 PJ PPT</a></p></h3>
-
+ 
+[LYNMP 홈페이지 바로가기](https://lynmp.com "개발자들의 퇴근 도우미 LYNMP")
 
 ## Installation Process
 ```bash
