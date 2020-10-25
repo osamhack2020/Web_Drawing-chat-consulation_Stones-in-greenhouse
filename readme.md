@@ -78,7 +78,7 @@ $ yarn start or npm run start
 <td style="text-align:left">Backend</td>
 <td style="text-align:left">fjdksl546@gmail.com</td>
 <td style="text-align:left"><a href="https://github.com/fjdksl546">
-<img src="http://img.shields.io/badge/fjdksl546-655ced?style=appveyor&logo=github&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+<img src="http://img.shields.io/badge/fjdksl546-655ced?style=social&logo=github&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
 </a></td>
 </tr>
 </tbody>
