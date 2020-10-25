@@ -12,7 +12,7 @@
   
 
   
-   <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/Webpage-655ced?style=for-the-badge&logo=github" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
+   <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/Webpage-655ced?style=for-the-badge" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
 
 
 ## Installation Process
