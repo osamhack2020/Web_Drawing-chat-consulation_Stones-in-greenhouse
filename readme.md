@@ -8,7 +8,8 @@
  <p align="center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📘 Gitbook&nbsp;</a> <a href="www.youtube.com">&nbsp;🖥 WebPage</a></p>
 
  <p align="center"><a href="www.youtube.com">🎬 PJ Video</a> <a href="www.youtube.com"> &nbsp; 🎞 PJ PPT</a></p></h3>
- 
+ <p align = "center"><img src="http://img.shields.io/badge/Gitbook-655ced?style=flat&logo=github&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/> </p>
+ <p align = "center"><img src="http://img.shields.io/badge/Webpage-655ced?style=flat&logo=github&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/> </p>
 
 
 ## Installation Process
@@ -77,7 +78,7 @@ $ yarn start or npm run start
 <td style="text-align:left">Backend</td>
 <td style="text-align:left">fjdksl546@gmail.com</td>
 <td style="text-align:left"><a href="https://github.com/fjdksl546">
-<img src="http://img.shields.io/badge/fjdksl546-655ced?style=flat&logo=gitbook&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+<img src="http://img.shields.io/badge/fjdksl546-655ced?style=flat&logo=github&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
 </a></td>
 </tr>
 </tbody>
