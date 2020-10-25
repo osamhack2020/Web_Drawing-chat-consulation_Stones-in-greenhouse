@@ -4,15 +4,15 @@
 
 <p align="center"><img src="./image_for_read-me/stone.png"></p>
  
- <p align = "center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/"><img src="http://img.shields.io/badge/Gitbook-655ced?style=for-the-badge&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
+ <p align = "center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/"><img src="http://img.shields.io/badge/Gitbook-655ced?style=for-the-badge&color=informational" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
  
  <p align = "center"><a href="https://www.naver.com"><img src="http://img.shields.io/badge/Webpage-655ced?style=for-the-badge&color=critical" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
  
-  <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/Pj-655ced?style=for-the-badge&color=informational" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
+  <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/Pj PPT-655ced?style=for-the-badge&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
   
 
   
-   <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/Webpage-655ced?style=for-the-badge" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
+   <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/PJ Video-655ced?style=for-the-badge" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
 
 
 ## Installation Process
