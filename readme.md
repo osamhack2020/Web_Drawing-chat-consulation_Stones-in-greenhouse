@@ -2,7 +2,8 @@
 
 # 온실 속 돌멩이 
 
-<h3><p align="center"><p align="center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/">📘 Gitbook</a> <a href="www.youtube.com">  📒 Web Page</a></p><img src="./image_for_read-me/stone.png"></p> 
+<h3><p align="center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/">📘 Gitbook</a> <a href="www.youtube.com">  📒 Web Page</a></p>
+ <p align="center"><img src="./image_for_read-me/stone.png"></p> 
  <p align="center"><a href="www.youtube.com">🎬 PJ Video</a> <a href="www.youtube.com">  🎞 PJ Announcement</a></p></h3>
 
 
