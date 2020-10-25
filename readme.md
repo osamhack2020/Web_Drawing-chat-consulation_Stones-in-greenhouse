@@ -12,7 +12,7 @@
 <br></br>
 
 
-## 설치 안내 (Installation Process)
+## Installation Process
 ```bash
 $ git clone git주소
 $ yarn or npm install
