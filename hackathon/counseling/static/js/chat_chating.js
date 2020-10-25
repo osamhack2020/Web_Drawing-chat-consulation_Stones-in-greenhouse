@@ -5,8 +5,7 @@ let jsonParsing;
 
 //JSON 데이터
 
-let application = {
-    'type': 'apply', //상담 정보
+let application = { //상담 정보
 	'name': '',
 	'address': '',
 	'reason': []
@@ -17,15 +16,15 @@ let apply = {
 	'application': application
 }
 
-let _message = {
-	'type': 'message',
-	'message': 'test', //test 삭제요망
-    'opponent': 'group_name'
+let accept = { //상담 수락 확인, 종료 확인
+    'type': 'accept',
+    'class': 'finish'
 }
 
-let accept = { //테스트용, 삭제요망
-    'type': 'accept',
-    'class' : 'accept'
+let _message = {
+	'type': 'message',
+	'message': '',
+    'opponent': 'group_name'
 }
 
 let message_is_delivered = {
@@ -36,12 +35,59 @@ let message_is_delivered = {
 let state = {
     'type' : 'state',
     'direction' : 'request',
-    'state' : '2', //0:오프라인 1:자리 비움 2:상담 대기 3:상담 준비 중 4:상담 중
-    'comment' : '상담 대기 중'
+    'state' : '', //0:오프라인 1:자리 비움 2:상담 대기 3:상담 준비 중 4:상담 중
+    'comment' : ''
 }
 
+const LOGDATADEMO = {
+    "coun20201018" : [
+        {
+            'type': 'message',
+            'message': '안녕하세요~', //test 삭제요망
+            'opponent': 'counselor'
+        },
+        {
+            'type': 'message',
+            'message': '반갑습니다^^', //test 삭제요망
+            'opponent': 'counselor'
+        },
+        {
+            'type': 'message',
+            'message': '안녕하세요.', //test 삭제요망
+            'opponent': 'counselee'
+        },
+        {
+            'type': 'message',
+            'message': '어떤 고민으로 상담을 신청하셨나요?',
+            'opponent': 'counselor'
+        },
+        {
+            'type': 'message',
+            'message': '그 전에 물어볼 것이 있습니다.',
+            'opponent': 'counselee'
+        },
+        {
+            'type': 'message',
+            'message': '상담이 끝나고 난 이후에 나눈 대화 내용은 상담관 님이 확인할 수 있나요?',
+            'opponent': 'counselee'
+        },
+        {
+            'type': 'message',
+            'message': '비밀 보장에 대해 민감해서 확인하고 싶습니다.', 
+            'opponent': 'counselee'
+        },
+        {
+            'type': 'message',
+            'message': '맞습니다. 상담관은 상담 종료 후 상담 내용을 확인할 수 있지만 참고용으로만 사용하고 본 내용은 저와 상담자님 단 둘만 조회할 수 있으니 안심하세요~',
+            'opponent': 'counselor'
+        }
+    ]
+}
+
+const logViewTest = document.getElementById('logviewtest');
+
 //웹소켓 URL
-const WS_URL = 'ws://' + location.host + '/ws/counseling/';
+const WS_URL = 'ws://' + document.location.host + '/ws/counseling/';
 
 // DOM 컨트롤
 let chatBox = document.getElementById('chat__chats');
@@ -65,8 +111,8 @@ const COUN_FINISH = document.getElementById('coun__finish');
 const MODAL_BACKTOMAIN = document.getElementById('modal__backtomain');
 
 //모달 페이지 (test)
-let modalTestText = document.getElementById('modal__test-text');
-let modalTestBtn = document.getElementById('modal__test-btn');
+let modalTestText = document.getElementById('modal__text');
+let modalTestBtn = document.getElementById('modal__submit');
 
 
 function init() {
@@ -76,13 +122,11 @@ function init() {
     chatsendready();
     closeModalReady();
     sendCounInfoReady();
+    logDemoReady();
 }
 
 function chatWS() { //연결
     ws = new WebSocket(WS_URL);
-    ws.onopen = function() {
-        onloadCheckState();
-    };
     ws.onclose = function(para) {
         chatClose(para);
     }
@@ -95,7 +139,7 @@ function chatWS() { //연결
 }
 
 function chatMessage(para) { //수신 데이터 분별 및 함수 호출
-    jsonParsing = para //JSON.parse(para);
+    jsonParsing = JSON.parse(para);
     switch(jsonParsing.type) {
         case 'accept':
             if (jsonParsing.class == 'accept') {
@@ -219,10 +263,11 @@ function sendCounInfoReady() {
 }
 
 function sendCounInfo() { //상담 정보 제출
-    application.name = modalTestText.value;
+    application.reason = modalTestText.value;
     chatModal.classList.add('vanish');
     chatWait();
-    ws.send(JSON.stringify(application));
+    console.log(apply);
+    ws.send(JSON.stringify(apply));
 }
 
 function printReceive(message) { //수신 메시지 출력
@@ -266,7 +311,6 @@ function chatReceive() {
 }
 
 function chatReceiveError(para) {
-    console.log(para.reason);
     chatFinish();
     printReceive(`현재 상담이 불가능 합니다.<br>사유 : ${para.reason}`)
 }
@@ -307,9 +351,37 @@ function chatsend() { //입력 메시지 발신
             input.focus();
             input.value = null;
             ws.send(jsonContent);
-            ws.send(message_is_delivered);
+            ws.send(JSON.stringify(message_is_delivered));
         }
     } 
+}
+
+//로그 조회 데모
+
+function logDemoReady() {
+    logViewTest.addEventListener('click', logDemo);
+}
+
+function logDemo() {
+    while (chatBox.hasChildNodes()) {
+        chatBox.removeChild(chatBox.firstChild);
+    } 
+    for (let i = 0; i < LOGDATADEMO.coun20201018.length; i++) {
+        switch (LOGDATADEMO.coun20201018[i].opponent) {
+            case 'counselor' :
+                printReceive(LOGDATADEMO.coun20201018[i].message);
+                break;
+            case 'counselee' :
+                printSend(LOGDATADEMO.coun20201018[i].message);
+        }
+    }
+    headerWait.classList.add('vanish');
+    headerReady.classList.add('vanish');
+    headerSend.classList.add('vanish');
+    headerReceive.classList.add('vanish');
+    headerChating.classList.add('vanish');
+    headerLog.removeAttribute('class');
+    connectFlag = false;
 }
 
 init();

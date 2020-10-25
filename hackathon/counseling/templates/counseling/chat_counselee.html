@@ -39,9 +39,10 @@
                             <p>{{ affi }}</p>
                         </div>
                         <a href="account.html" class="userinfo__mod">계정 정보 변경</a>
-                        <div id="logout">
-                            <p>로그아웃</p>
-                        </div>
+                        <!--로그아웃-->
+                        <form action="logout" method="post">
+                            <input type="submit" value="로그아웃" id="logout">
+                        </form>                      
                     </div>
                     <div id="side__counstate" class="vanish">
                         <div class="counstate__img">
@@ -63,9 +64,9 @@
                     </div>
                     <div id="side__counlog" class="vanish">
                         <!--상담 로그 조회-->
-                        <div class="counlog__block">
-                            <h1>{{ date }}자 로그</h1>
-                            <p>{{ counname }} 상담관 </p>
+                        <div class="counlog__block" id="logviewtest">
+                            <h1>2020-10-18 자 로그</h1>
+                            <p>XXX 상담관 </p>
                         </div>
                         <!--test-->
                     </div>
@@ -113,6 +114,10 @@
                         </div>
                         <div id="chat__mainmenu">
                             <!--채팅 중 각종 기능-->
+                            <div id="mainmenu__wrapper">
+                                <!--기능 구분/ 선택자 분리-->
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,10 +125,8 @@
                     <div class="modal__container">
                         <div id="modal__backtomain">창 닫기</div>
                         <div id="modal__contents">
-                            <div class="modal_box">
-                                <input type="text" name="" id="modal__test-text">
-                                <input type="button" value="submit" id="modal__test-btn">
-                            </div>
+                            <textarea name="modal__text" id="modal__text" wrap="hard" required placeholder="원활한 상담을 위해 상담관에게 사전 정보를 전달합니다. 원하는 상담 내용을 간략히 적어주세요."></textarea>
+                            <input type="button" value="작성 완료" id="modal__submit">
                         </div>
                     </div>
                 </div>

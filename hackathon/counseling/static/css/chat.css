@@ -1,10 +1,11 @@
 html, body {
-    height: 100%;
+    height: 100%;  
 }
 
 #chat {
     height: 100%;
-    color: #fff;
+    color: #000;
+    overflow: hidden;
 }
 
 .chat__wrapper {
@@ -19,6 +20,7 @@ html, body {
     grid-template-rows: repeat(10, 1fr);
     justify-items: center;
     align-items: center;
+    color: #fff;
     background-color: #060624;
 }
 
@@ -44,15 +46,17 @@ html, body {
 #chat__side {
     box-sizing: border-box;
     padding: 20px;
+    border-right: 1px solid #c0c0c0;
     width: 200px;
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: #162536;
+    color: #000;
+    background-color: #cecece;
 }
 
 .userinfo__name {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #060624;
     font-size: 20px;
     font-weight: 700;
     margin: 20px 0;
@@ -73,7 +77,7 @@ html, body {
     height: 40px;
     width: 160px;
     margin: 20px 0;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -82,14 +86,14 @@ html, body {
     font-size: 14px;
     font-weight: 700;
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #060624;
 }
 
 #userinfo__couninfo {
     height: 40px;
     width: 160px;
     margin: 20px 0;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -97,8 +101,8 @@ html, body {
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
+    color: #000;
+    background-color: rgba(6, 6, 24, 0.1);
 }
 
 .counstate__img {
@@ -117,7 +121,7 @@ html, body {
 
 .counstate__name {
     margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #000;
 }
 
 .counstate__name > h1 {
@@ -139,7 +143,7 @@ html, body {
     align-items: center;
     font-size: 14px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 #counstate__alarm-g {
@@ -187,7 +191,7 @@ html, body {
 .counlog__block {
     width: 160px;
     margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .counlog__block > h1 {
@@ -213,7 +217,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #525764;
+    background-color: #fff;
 }
 
 .header__title {
@@ -262,7 +266,7 @@ html, body {
     animation: blink 2s linear infinite forwards;
 }
 
-#header__wait, #header__send, #header__chating {
+#header__wait, #header__send, #header__chating, #header__log {
     animation: chatfadein 1s linear forwards;
 }
 
@@ -273,14 +277,13 @@ html, body {
 .header__control > button {
     width: 160px;
     height: 30px;
-    border: 0;
+    border: 1px solid rgba(23, 23, 36, 0.3);
     border-radius: 10px;
     font-size: 14px;
     font-weight: 700;
     color: #fff;
-    background-color: #162536;
+    background-color: #293146;
     outline: none;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
 }
 
 .chat__main {
@@ -293,8 +296,7 @@ html, body {
     width: calc(100% - 200px);
     display: flex;
     flex-direction: column;
-    background-color: #525764;
-    box-shadow: inset 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(238, 238, 238);
 }
 
 #chat__chats {
@@ -332,7 +334,8 @@ html, body {
     font-weight: 300;
     line-height: 1.5em;
     color: #060624;
-    background-color: #b6b6b6
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 1px rgba(6, 6, 24, 0.1);
 }
 
 .chats__block-send {
@@ -343,9 +346,11 @@ html, body {
     border-bottom-right-radius: 0px;
     align-self: flex-end;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.5em;
-    background-color: #be8a8a;
+    color: #fff;
+    background: linear-gradient(155deg, #5B86E5, #36D1DC);
+    box-shadow: 0px 0px 10px 1px rgba(6, 6, 24, 0.1);
 }
 
 #chat__control {
@@ -359,6 +364,9 @@ html, body {
 #chat__input {
     width: calc(100% - 50px);
     height: 30px;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    outline: none;
 }
 
 #chat__sendbutton {
@@ -369,13 +377,19 @@ html, body {
     align-items: center;
 }
 
-.chat__sendbutton > .fa-arrow-up {
+#chat__sendbutton > .fa-arrow-up {
     font-size: 20px;
-    color: #fff;
+    color: #8f8f8f;
 }
 
 #chat__mainmenu {
-    width: 200px;
-    background-color: #162536;
-    box-shadow: inset 0 10px 30px -30px rgba(0, 0, 0, 0.3);
+    width: 200px;  
+    padding: 50px 0;
+    background-color: rgb(238, 238, 238);
+}
+
+#mainmenu__wrapper {
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #cecece;
 }

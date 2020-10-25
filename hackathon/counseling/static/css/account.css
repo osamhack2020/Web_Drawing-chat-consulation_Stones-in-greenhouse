@@ -22,7 +22,6 @@
     background-color: #5B86E5;
     color: #fff;
     outline: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 @keyframes accountfadein {
@@ -46,7 +45,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: #d4e8f2;
+    background-color: #e9f6fc;
     animation: accountfadein 0.5s ease forwards;
 }
 
@@ -70,4 +69,24 @@
     font-size: 18px;
     font-weight: 700;
     opacity: 60%;
+}
+
+#account__pw, #account__pw-check, #account__birth-year, #account__birth-mon, #account__birth-day, .affi__wrapper select {
+    height: 25px;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    outline: none;
+}
+
+#account__submit, #birth__modify, #birth__modify-done, #affi__modify, #affi__modify-done {
+    height: 28px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    background-color: #5B86E5;
+    outline: none;
 }

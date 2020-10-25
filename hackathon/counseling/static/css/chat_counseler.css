@@ -1,5 +1,5 @@
 .couninfo__name {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #000;
     padding-bottom: 20px;
     font-size: 20px;
     font-weight: 700;
@@ -19,27 +19,37 @@
     width: 160px;
     margin: 20px 0;
     padding: 11px 0px;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     border-radius: 10px;
     text-decoration: none;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #060624
+}
+
+#header-coun__wait, #header-coun__receive, #header__log {
+    animation: chatfadein 1s linear forwards;
+}
+
+#header-coun__ending {
+    animation: blink 2s linear infinite forwards;
 }
 
 #logout {
     height: 25px;
     width: 90px;
     margin: 0 auto;
-    border: 1px solid rgb(255, 0, 0);
+    border: 1px solid rgb(255, 80, 80);
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 11px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    background: rgba(255, 0, 0, 0.2);
 }
 
 #side__counlog-coun {
@@ -60,7 +70,7 @@
 .counlog-coun__block {
     width: 160px;
     margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #000;
 }
 
 .counlog-coun__block > h1 {

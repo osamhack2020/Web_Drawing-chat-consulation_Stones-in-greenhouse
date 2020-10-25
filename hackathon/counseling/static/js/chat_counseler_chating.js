@@ -12,9 +12,9 @@ let _message = {
 }
 
 let application = { //상담 정보
-	'name': '',
-	'address': '',
-	'reason': []
+	'name': 'testname',
+	'address': 'testaddress',
+	'reason': 'testreason'
 }
 
 let application_is_delivered = {
@@ -43,8 +43,55 @@ let state = {
     'state' : '0' //0:오프라인 1:자리 비움 2:상담 대기 3:상담 준비 중 4:상담 중
 }
 
+const LOGDATADEMO = {
+    "coun20201018" : [
+        {
+            'type': 'message',
+            'message': '안녕하세요~', //test 삭제요망
+            'opponent': 'counselor'
+        },
+        {
+            'type': 'message',
+            'message': '반갑습니다^^', //test 삭제요망
+            'opponent': 'counselor'
+        },
+        {
+            'type': 'message',
+            'message': '안녕하세요.', //test 삭제요망
+            'opponent': 'counselee'
+        },
+        {
+            'type': 'message',
+            'message': '어떤 고민으로 상담을 신청하셨나요?',
+            'opponent': 'counselor'
+        },
+        {
+            'type': 'message',
+            'message': '그 전에 물어볼 것이 있습니다.',
+            'opponent': 'counselee'
+        },
+        {
+            'type': 'message',
+            'message': '상담이 끝나고 난 이후에 나눈 대화 내용은 상담관 님이 확인할 수 있나요?',
+            'opponent': 'counselee'
+        },
+        {
+            'type': 'message',
+            'message': '비밀 보장에 대해 민감해서 확인하고 싶습니다.', 
+            'opponent': 'counselee'
+        },
+        {
+            'type': 'message',
+            'message': '맞습니다. 상담관은 상담 종료 후 상담 내용을 확인할 수 있지만 참고용으로만 사용하고 본 내용은 저와 상담자님 단 둘만 조회할 수 있으니 안심하세요~',
+            'opponent': 'counselor'
+        }
+    ]
+}
+
+const logViewTest = document.getElementById('logviewtest');
+
 //웹소켓 URL
-const WS_URL = '';
+const WS_URL = 'ws://' + document.location.host + '/ws/counseling/';
 
 // DOM 컨트롤
 let chatBox = document.getElementById('chat__chats');
@@ -56,6 +103,8 @@ let headerLog = document.getElementById('header__log');
 let chatModal = document.getElementById('chat__modal');
 let modalTestText = document.getElementById('modal__test-text');
 let modalTestBtn = document.getElementById('modal__test-btn');
+let modalInfo = document.getElementById('modal__info');
+let modalReceive = document.getElementById('modal__receive');
 let connectFlag = false;
 
 const SEND_BUTTON = document.getElementById('chat__sendbutton');
@@ -67,12 +116,13 @@ const COUN_REST = document.getElementById('couninfo__counrest');
 const COUN_ING = document.getElementById('couninfo__couning');
 
 function init() {
-    //chatWS();
+    chatWS();
     chatFinishClick();
     chatsendready();
     closeModalReady();
     turnRestReady();
     turnReadyReady();
+    logDemoReady();
 }
 
 function chatWS() { //연결
@@ -97,10 +147,10 @@ function chatWS() { //연결
 }
 
 function chatMessage(para) { //수신 데이터 분별 및 함수 호출
-    jsonParsing = para //JSON.parse(para);
+    jsonParsing = JSON.parse(para);
     switch(jsonParsing.type) {
         case 'apply':
-            receiveApp();
+            receiveApp(jsonParsing);
             break;
         case 'accept':
             chatFinish();
@@ -122,7 +172,7 @@ function chatMessage(para) { //수신 데이터 분별 및 함수 호출
 function sendState() {
     jsonContent = JSON.stringify(state);
     console.log(jsonContent);
-    //ws.send(state);
+    ws.send(state);
 }
 
 function turnRestReady() {
@@ -159,9 +209,15 @@ function turnIng() {
 
 //상담 신청 수신 및 준비
 
-function receiveApp() { //상담 정보 모달
+function receiveApp(info) { //상담 정보 모달
     turnIng();
-    chatModal.removeAttribute('class');
+    let modalInfoBox = document.createElement('p');
+    let modalReceiveBox = document.createElement('p');
+    chatModal.removeAttribute('class'); //모달 페이지 출력
+    modalInfoBox.innerHTML = info.application.name;
+    modalReceiveBox.innerHTML = info.application.reason;
+    modalInfo.appendChild(modalInfoBox);
+    modalReceive.appendChild(modalReceiveBox);
     jsonContent = JSON.stringify(application_is_delivered);
     ws.send(jsonContent);
     state.state = 3; //상담 준비 중
@@ -198,6 +254,7 @@ function chatFinish() { //연결 중단
     COUN_FINISH.classList.add('vanish');
     headerCounWait.removeAttribute('class');
     headerCounReceive.classList.add('vanish');
+    headerCounEnding.classList.add('vanish');
     headerLog.classList.add('vanish');
     connectFlag = false;
     turnReady();
@@ -269,9 +326,35 @@ function chatsend() { //입력 메시지 발신
             input.focus();
             input.value = null;
             ws.send(jsonContent);
-            ws.send(message_is_delivered);
+            ws.send(JSON.stringify(message_is_delivered));
         }
     } 
+}
+
+//로그 조회 데모
+
+function logDemoReady() {
+    logViewTest.addEventListener('click', logDemo);
+}
+
+function logDemo() {
+    while (chatBox.hasChildNodes()) {
+        chatBox.removeChild(chatBox.firstChild);
+    } 
+    for (let i = 0; i < LOGDATADEMO.coun20201018.length; i++) {
+        switch (LOGDATADEMO.coun20201018[i].opponent) {
+            case 'counselee' :
+                printReceive(LOGDATADEMO.coun20201018[i].message);
+                break;
+            case 'counselor' :
+                printSend(LOGDATADEMO.coun20201018[i].message);
+        }
+    }
+    headerCounWait.classList.add('vanish');
+    headerCounReceive.classList.add('vanish');
+    headerCounEnding.classList.add('vanish');
+    headerLog.removeAttribute('class');
+    connectFlag = false;
 }
 
 init();

@@ -22,24 +22,30 @@ class ChatConsumer(WebsocketConsumer):
             self.channel_name
         )
 
-    def receive(self, data):
-        data_json = json.loads(data)
-        type = data_json['type']
-        if type == 'apply':
-            counseler = self.scope['user'].counseler
-            if counseler.online:
-                pakcet = {
-                    'type': type,
-                    'name': data['name']
-                }
-                async_to_sync(self.channel_layer.group_send)(counseler, pakcet)
-            else:
+    def receive(self, text_data):
+        data = json.loads(text_data)
+        _type = data['type']
+        user = self.scope['user']
+        if _type == 'apply':
+            application = {
+                'name': user.name,
+                'company': user.company,
+                'reason': data['applicatoin']['reason']
+            }
+            async_to_sync(self.channel_layer.group_send)(
+                str(user.counseler),
+                {
+                    "type": "apply",
+                    "applicatoin": application,
+                },
+            )
+        elif _type == 'accept':
+            pass
+        elif _type == 'message':
+            pass
 
     def apply(self, event):
-        self.send(json.dumps(event['packet']))
-
-    def accept_counsel(self, event):
-        self.send(json.dumps(event['packet']))
-    
-    def message(self, event):
-        self.send(json.dumps(event['packet']))
+        application = event['application']
+        self.send(text_data=json.dumps({
+            'application':applicatoin
+        }))

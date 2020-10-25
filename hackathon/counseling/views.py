@@ -16,22 +16,15 @@ def signIn(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
+            user.status = 1
+            user.save()
             return redirect('counsel')
         else:
             return render(request, 'counseling/index.html')
 
-def signOut(request):
-    logout(request)
-    return redirect('index')
-
 @login_required
 def counsel(request):
-    if request.user.type == 'counseler':
+    if request.user.role == 2:
         return render(request, 'counseling/chat_counseler.html')
     else:
         return render(request, 'counseling/chat_counselee.html')
-
-def test(request):
-    sessions = Session.objects.filter(expire_date__gte=timezone.now())
-    session_ = request.user
-    return render(request, 'counseling/test.html', {'session_':session_, 'sessions':sessions})

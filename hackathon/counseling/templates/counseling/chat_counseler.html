@@ -37,15 +37,16 @@
                         <div id="couninfo__counready">상담 대기 중</div>
                         <div id="couninfo__counrest" class="vanish">자리 비움</div>
                         <div id="couninfo__couning" class="vanish">상담 중</div>
-                        <div id="logout">
-                            <p>로그아웃</p>
-                        </div>
+                        <!--로그아웃-->
+                        <form action="logout" method="post">
+                            <input type="submit" value="로그아웃" id="logout">
+                        </form>   
                     </div>
                     <div id="side__counlog-coun" class="vanish">
                         <!--상담 로그 조회-->
-                        <div class="counlog__block">
-                            <h1>{{ date }}자 로그</h1>
-                            <p>{{ counname }} 상담관 </p>
+                        <div class="counlog__block" id="logviewtest">
+                            <h1>2020-10-18 자 로그</h1>
+                            <p>XXX 상담관 </p>
                         </div>
                         <!--test-->
                     </div>
@@ -87,6 +88,10 @@
                         </div>
                         <div id="chat__mainmenu">
                             <!--채팅 중 각종 기능-->
+                            <div id="mainmenu__wrapper">
+                                <!--기능 구분/ 선택자 분리-->
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,9 +99,8 @@
                     <div class="modal__container">
                         <div id="modal__backtomain">상담 시작</div>
                         <div id="modal__contents">
-                            <div class="modal_box">
-
-                            </div>
+                            <div id="modal__info"></div>
+                            <div id="modal__receive"></div>
                         </div>
                     </div>
                 </div>
