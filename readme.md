@@ -8,11 +8,12 @@
  
  <p align = "center"><a href="https://www.naver.com"><img src="http://img.shields.io/badge/Webpage-655ced?style=for-the-badge&color=critical" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
  
-  <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/Pj PPT-655ced?style=for-the-badge&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
+   <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/PJ Video-655ced?style=for-the-badge" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
+
+<p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/Pj PPT-655ced?style=for-the-badge&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
   
 
   
-   <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/PJ Video-655ced?style=for-the-badge" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
 
 
 ## Installation Process
