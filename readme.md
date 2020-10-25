@@ -21,16 +21,7 @@
 
 <br></br>
 
-## 기술 스택 (Technique Used)
 
-<h4><p align="left">&nbsp&nbsp&nbspFrontend</p></h4>
-
-<p align="left"> <img src="./image_for_read-me/htmljsscss.png"> </p> 
-<h2></h2>
-<h4><p align="right">Backend&nbsp</p></h4>
-
-<p align="right">&nbsp&nbsp&nbsp<img src="./image_for_read-me/backend_png.png"> </p>
-<br></br>
 
 ## 설치 안내 (Installation Process)
 ```bash
