@@ -3,16 +3,11 @@
 <h1> 온실 속 돌멩이 <a href="https://github.com/osamhack2020/Web_Chat-consulation_Stones-in-greenhouse/blob/master/license.md"><img alt="GitHub" src="https://img.shields.io/github/license/osamhack2020/Web_Chat-consulation_Stones-in-greenhouse"></a></h1> 
 
 
-<h3>
- <p align="center"><img src="./image_for_read-me/stone.png"></p>
- <p align="center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📘 Gitbook&nbsp;</a> <a href="www.youtube.com">&nbsp;🖥 WebPage</a></p>
-
- <p align="center"><a href="www.youtube.com">🎬 PJ Video</a> <a href="www.youtube.com"> &nbsp; 🎞 PJ PPT</a></p></h3>
  
- <p align = "center"><img src="http://img.shields.io/badge/Gitbook-655ced?style=flat&logo=github&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/> </p>
- <p align = "center"><img src="http://img.shields.io/badge/Webpage-655ced?style=flat&logo=github&color=critical" style="height : auto; margin-left : 10px; margin-right : 10px;"/> </p>
-  <p align = "center"><img src="http://img.shields.io/badge/Webpage-655ced?style=flat&logo=github&color=informational" style="height : auto; margin-left : 10px; margin-right : 10px;"/> </p>
-   <p align = "center"><img src="http://img.shields.io/badge/Webpage-655ced?style=flat&logo=github" style="height : auto; margin-left : 10px; margin-right : 10px;"/> </p>
+ <p align = "center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/"><img src="http://img.shields.io/badge/Gitbook-655ced?style=flat&logo=github&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
+ <p align = "center"><a href="https://www.naver.com"><img src="http://img.shields.io/badge/Webpage-655ced?style=flat&logo=github&color=critical" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
+  <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/Pj-655ced?style=flat&logo=github&color=informational" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
+   <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/Webpage-655ced?style=flat&logo=github" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
 
 
 ## Installation Process
