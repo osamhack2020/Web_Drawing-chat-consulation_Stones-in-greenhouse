@@ -51,7 +51,7 @@ $ yarn start or npm run start
 <td style="text-align:left">Manager, Backend</td>
 <td style="text-align:left">must1080@naver.com</td>
 <td style="text-align:left"><a href="https://github.com/doongu">
-<img src="http://img.shields.io/badge/doongu-655ced?style=flat&logo=github" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+<img src="http://img.shields.io/badge/doongu-655ced?style=social&logo=github" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
 </a></td>
 </tr>
 <tr>
@@ -60,7 +60,7 @@ $ yarn start or npm run start
 <td style="text-align:left">Frontend</td>
 <td style="text-align:left">donghyeonsheen@gmail.com</td>
 <td style="text-align:left"><a href="https://github.com/donghyeounsheen">
-<img src="http://img.shields.io/badge/donghyeounsheen-655ced?style=flat&logo=github&color=informational" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+<img src="http://img.shields.io/badge/donghyeounsheen-655ced?style=social&logo=github&color=informational" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
 </a></td>
 </tr>
 <tr>
@@ -69,7 +69,7 @@ $ yarn start or npm run start
 <td style="text-align:left">Frontend</td>
 <td style="text-align:left">rkdrudxo@naver.com</td>
 <td style="text-align:left"><a href="https://github.com/Heuttun">
-<img src="http://img.shields.io/badge/Heuttun-655ced?style=flat&logo=github&color=critical" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+<img src="http://img.shields.io/badge/Heuttun-655ced?style=social&logo=github&color=critical" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
 </a></td>
 </tr>
 <tr>
