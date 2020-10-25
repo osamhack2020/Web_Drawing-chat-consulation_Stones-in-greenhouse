@@ -6,11 +6,8 @@
 <h3>
  <p align="center"><img src="./image_for_read-me/stone.png"></p>
  <p align="center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📘 Gitbook&nbsp;</a> <a href="www.youtube.com">&nbsp;🖥 WebPage</a></p>
- <br></br>
+
  <p align="center"><a href="www.youtube.com">🎬 PJ Video</a> <a href="www.youtube.com"> &nbsp; 🎞 PJ PPT</a></p></h3>
-
-
-<br></br>
 
 
 ## Installation Process
