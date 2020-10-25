@@ -1,7 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=135&section=header&text=&fontSize=90&fontAlignY=30&)
 
 <h1> 온실 속 돌멩이 </h1> 
-
+<h6> 버튼을 클릭하면 링크로 이동합니다. </h6>
 <p align="center"><img src="./image_for_read-me/stone.png"></p>
  
  <p align = "center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/"><img src="http://img.shields.io/badge/Gitbook-655ced?style=for-the-badge&color=informational" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
