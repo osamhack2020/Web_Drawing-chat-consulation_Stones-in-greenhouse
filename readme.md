@@ -18,9 +18,8 @@
 
 ## Installation Process
 ```bash
-$ git clone git주소
-$ yarn or npm install
-$ yarn start or npm run start
+$ git clone https://github.com/osamhack2020/Web_Chat-consulation_Stones-in-greenhouse.git
+$ pip install -r requirements.txt
 ```
 <br></br>
 
