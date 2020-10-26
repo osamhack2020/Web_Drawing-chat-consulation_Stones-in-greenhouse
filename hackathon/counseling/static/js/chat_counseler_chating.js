@@ -127,17 +127,7 @@ function init() {
 
 function chatWS() { //연결
     ws = new WebSocket(WS_URL);
-    ws.onopen = function() {
-        state.state = 2; //상담 대기 중
-        jsonContent = JSON.stringify(state);
-        ws.send(jsonContent);
-    };
-    ws.onclose = function(para) {
-        chatClose(para);
-        state.state = 0; //오프라인
-        jsonContent = JSON.stringify(state);
-        ws.send(jsonContent);
-    }
+    
     ws.onmessage = function(para) {
         chatMessage(para);
     }
@@ -147,13 +137,22 @@ function chatWS() { //연결
 }
 
 function chatMessage(para) { //수신 데이터 분별 및 함수 호출
-    jsonParsing = JSON.parse(para);
+    jsonParsing = JSON.parse(para.data);
+	console.log(jsonParsing)
     switch(jsonParsing.type) {
         case 'apply':
             receiveApp(jsonParsing);
             break;
         case 'accept':
-            chatFinish();
+		    COUN_ONLINE.removeAttribute('class');
+		    COUN_FINISH.classList.add('vanish');
+		    headerCounWait.removeAttribute('class');
+		    headerCounReceive.classList.add('vanish');
+		    headerCounEnding.classList.add('vanish');
+		    headerLog.classList.add('vanish');
+		    connectFlag = false;
+		    turnReady();
+		    break;
         case 'message':
             printReceive(jsonParsing.message);
             break;
@@ -211,6 +210,7 @@ function turnIng() {
 
 function receiveApp(info) { //상담 정보 모달
     turnIng();
+	console.log(info)
     let modalInfoBox = document.createElement('p');
     let modalReceiveBox = document.createElement('p');
     chatModal.removeAttribute('class'); //모달 페이지 출력
@@ -241,8 +241,6 @@ function closeModal() {
     connectFlag = true;
     ws.send(jsonContent);
     state.state = 4; //상담 중
-    jsonContent = JSON.stringify(state);
-    ws.send(jsonContent);
 }
 
 function chatFinishClick() {
@@ -258,6 +256,9 @@ function chatFinish() { //연결 중단
     headerLog.classList.add('vanish');
     connectFlag = false;
     turnReady();
+	ws.send(JSON.stringify({
+		'type':'exit'
+	}));
 }
 
 function printReceive(message) { //수신 메시지 출력
@@ -320,13 +321,12 @@ function chatsend() { //입력 메시지 발신
     }
     else {
         if (!input.value == '') {
-            _message.data = input.value;
+            _message.message = input.value;
             printSend(_message.message);
             jsonContent = JSON.stringify(_message);
             input.focus();
             input.value = null;
             ws.send(jsonContent);
-            ws.send(JSON.stringify(message_is_delivered));
         }
     } 
 }

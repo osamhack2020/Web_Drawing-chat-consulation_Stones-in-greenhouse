@@ -17,15 +17,17 @@ class User(AbstractUser):
         Counselee = 1
         Counseler = 2
     
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=20, null=True, blank=True)
     counseler = models.ForeignKey(
         'self',
         on_delete=models.PROTECT,
         related_name='counselee',
-        related_query_name='counselees'
+        related_query_name='counselees',
+        null=True,
+        blank=True
     )
-    birthday = models.DateField(auto_now_add=True)
-    company = models.CharField(max_length=150)
+    birthday = models.DateField(null=True, blank=True)
+    company = models.CharField(max_length=150, null=True, blank=True)
     code = models.IntegerField(choices=Code.choices, null=True, blank=True)
     status = models.IntegerField(choices=Status.choices, default=2)
-    role = models.IntegerField(choices=Role.choices)
+    role = models.IntegerField(choices=Role.choices, null=True, blank=True)

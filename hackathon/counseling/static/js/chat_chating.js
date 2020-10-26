@@ -139,7 +139,7 @@ function chatWS() { //연결
 }
 
 function chatMessage(para) { //수신 데이터 분별 및 함수 호출
-    jsonParsing = JSON.parse(para);
+    jsonParsing = JSON.parse(para.data);
     switch(jsonParsing.type) {
         case 'accept':
             if (jsonParsing.class == 'accept') {
@@ -147,7 +147,15 @@ function chatMessage(para) { //수신 데이터 분별 및 함수 호출
                 break;
             }
             else {
-                chatFinish();
+		    COUN_READY.removeAttribute('class');
+		    COUN_FINISH.classList.add('vanish');
+		    headerWait.removeAttribute('class'); 
+		    headerReady.classList.add('vanish');
+		    headerSend.classList.add('vanish');
+		    headerReceive.classList.add('vanish');
+		    headerChating.classList.add('vanish');
+		    headerLog.classList.add('vanish');
+		    connectFlag = false;
                 break;
             }
         case 'application_is_delivered' :
@@ -256,6 +264,9 @@ function chatFinish() { //연결 중단
     headerChating.classList.add('vanish');
     headerLog.classList.add('vanish');
     connectFlag = false;
+	ws.send(JSON.stringify({
+		'type':'exit'
+	}));
 }
 
 function sendCounInfoReady() {

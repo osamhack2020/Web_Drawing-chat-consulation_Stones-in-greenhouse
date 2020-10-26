@@ -27,25 +27,68 @@ class ChatConsumer(WebsocketConsumer):
         _type = data['type']
         user = self.scope['user']
         if _type == 'apply':
+            counseler = user.counseler
+            counseler.counseler_id = user.id
+            counseler.save()
             application = {
+                'type': 'apply',
                 'name': user.name,
                 'company': user.company,
-                'reason': data['applicatoin']['reason']
+                'reason': data['application']['reason']
             }
             async_to_sync(self.channel_layer.group_send)(
                 str(user.counseler),
                 {
                     "type": "apply",
-                    "applicatoin": application,
+                    "application": application,
                 },
             )
         elif _type == 'accept':
-            pass
+            packet = {
+                'type': '_accept',
+                'class': 'accept'
+            }
+            async_to_sync(self.channel_layer.group_send)(
+                str(user.counseler),
+                {
+                    "type": "counsel_accept",
+                    "packet": packet,
+                },
+            )
         elif _type == 'message':
-            pass
+            async_to_sync(self.channel_layer.group_send)(
+                str(user.counseler),
+                {
+                    "type": "message",
+                    "message": data['message'],
+                },
+            )
+        elif _type == 'exit':
+            async_to_sync(self.channel_layer.group_send)(
+                str(user.counseler),
+                {
+                    "type": "exit"
+                },
+            )
 
     def apply(self, event):
         application = event['application']
         self.send(text_data=json.dumps({
-            'application':applicatoin
+            'type': 'apply',
+            'application':application
+        }))
+    def counsel_accept(self, event):
+        self.send(text_data=json.dumps({
+            'type': 'accept',
+            'class': 'accept'
+        }))
+    def message(self, event):
+        self.send(text_data=json.dumps({
+            'type': 'message',
+            'message': event['message']
+        }))
+    def exit(self, event):
+        self.send(text_data=json.dumps({
+            'type': 'accept',
+            'class': 'exit'
         }))
