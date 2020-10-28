@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--스타일-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css" integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q" crossorigin="anonymous">
+    <title>비대면 상담 체계</title>
+  </head>
+  <body>
+    <main id="index">
+      <div class="index__prime">
+        <!--헤더-->
+        <div class="layer"></div>
+        <header id="header">
+          <div class="header__wrapper">
+            <h1 id="header__logo">비대면 상담 체계</h1>
+            <span id="header__logo-eng">Untact Counseling System</span>
+          </div>
+        </header>
+         <!--헤더 끝-->
+        <!--회원가입-->
+        <div class="sign">
+          <form action="login_page" id="sign__signup" method="POST">
+            <div class = "sign__row">
+              <label for="signup__name">이름</label>
+              <input type="text" name="signUpName"  id="signup__name"/>
+            </div>
+            <div class = "sign__row">
+              <label for="signup__id">아이디</label>
+              <input type="text" name="signUpId" id="signup__id"  placeholder="이메일로 작성해주세요."/>
+            </div>
+            <div class = "sign__row">
+              <label for="signup__pw">비밀번호</label>
+              <input type="password" name="signUpPw"  id="signup__pw" placeholder="15자 이내로 작성해주세요. " maxlength="15"/>
+            </div>
+            <div class = "sign__row">
+              <label for="signup__pw-check">비밀번호 재확인</label>
+              <input type="password" name="signUpPw_check"  id="signup__pw-check" placeholder="같은 비밀번호를   작성해주세요." maxlength="15"/>
+            </div>
+            <div class = "sign__row">
+              <label for="signup__birth-year">생년월일</label>
+              <div class="signup__birth">
+                <input type="text" name="signUpBirthYear"   id="signup__birth-year" placeholder="네자리 수로  작성해주세요." maxlength="4"/>
+                <p class="birth__text">년</p>
+                <select name="signUpBirthMonth"   id="signup__birth-mon">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <p class="birth__text">월</p>
+                <select name="signUpBirthDay"   id="signup__birth-day">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <p class="birth__text">일</p>
+              </div>
+            </div>
+            <div class = "sign__row">
+              <label for="signup__affi">소속</label>
+              <div class="affi__wrapper">
+                <select name = "signup__affi">
+                  <option value = 001> 지상 작전 사령부 </option>
+                  <option value = 002> 제2 작전 사령부 </option>
+                </select>
+                
+                <select name = "corps">
+                  <option value = 003> 수도군단</option>
+                  <option value = 004> 제1군단</option>
+                  <option value = 005> 제2군단</option>
+                  <option value = 006> 제3군단</option>
+                  <option value = 007> 제5군단</option>
+                  <option value = 008> 제6군단</option>
+                  <option value = 009> 제7기동군단</option>
+                  <option value = 010> 제8군단</option>
+                </select>
+                
+                <select name = "division">
+                  <optgroup label = 수도군단예하>
+                    <option value = 011> 제17보병사단</option>
+                    <option value = 012> 제51보병사단</option>
+                    <option value = 013> 제55보병사단</option>
+                    <option value = 014> 수도포병여단</option>
+                  </optgroup>
+                  
+                  <optgroup label = 제1군단예하>
+                    <option value = 015> 제1보병사단</option>
+                    <option value = 016> 제9보병사단</option>
+                    <option value = 017> 제25보병사단</option>
+                    <option value = 018> 제30기계화보병사단</option>
+                    <option value = 019> 제1포병여단</option>
+                    <option value = 020> 제2기갑여단</option>
+                    <option value = 021> 제1공병여단</option>
+                    <option value = 022> 제1군수지원여단</option>
+                  </optgroup>
+                  
+                  <optgroup label = 제2군단예하>
+                    <option value = 023> 제7보병사단</option>
+                    <option value = 024> 제15보병사단</option>
+                    <option value = 025> 제27보병사단</option>
+                    <option value = 026> 제2포병여단</option>
+                    <option value = 027> 제3기갑여단</option>
+                    <option value = 028> 제2공병여단</option>
+                    <option value = 029> 제2군수지원여단</option>
+                  </optgroup>
+                  
+                  <optgroup label = 제3군단예하>
+                    <option value = 030> 제12보병사단</option>
+                    <option value = 031> 제21보병사단</option>
+                    <option value = 032> 제3공병여단</option>
+                    <option value = 033> 제3포병여단</option>
+                    <option value = 034> 제3군수지원여단</option>
+                    <option value = 035> 제20기갑여단</option>
+                  </optgroup>
+                  
+                  <optgroup label = 제5군단예하>
+                    <option value = 036> 제3보병사단</option>
+                    <option value = 037> 제6보병사단</option>
+                    <option value = 038> 제1기갑여단</option>
+                    <option value = 039> 제5포병여단</option>
+                    <option value = 040> 제5공병여단</option>
+                    <option value = 041> 제5군수지원여단</option>
+                  </optgroup>
+                  
+                  <optgroup label = 제6군단예하>
+                    <option value = 042> 제5보병사단</option>
+                    <option value = 043> 제28보병사단</option>
+                    <option value = 044> 제5기갑여단</option>
+                    <option value = 045> 제6공병여단</option>
+                    <option value = 046> 제6포병여단</option>
+                  </optgroup>
+                  
+                  <optgroup label = 제7기동군단예하>
+                    <option value = 047> 수도기계화보병사단</option>
+                    <option value = 048> 제8기계화보병사단</option>
+                    <option value = 049> 제11기계화보병사단</option>
+                    <option value = 050> 제7포병여단</option>
+                    <option value = 051> 제7공병여단</option>
+                  </optgroup>
+                  
+                  <optgroup label = 제8군단예하>
+                    <option value = 052> 제22보병사단</option>
+                    <option value = 053> 제23단</option>
+                    <option value = 054> 제102기갑여단</option>
+                  </optgroup>
+                  
+                  <optgroup label = 제2작전사령부예하>
+                    <option value = 055> 제36보병사단</option>
+                    <option value = 056> 제1군수지원사령부</option>
+                    <option value = 057> 화력여단</option>
+                    <option value = 058> 정보통신여단</option>
+                    <option value = 059> 특수기동지원여단</option>
+                    <option value = 060> 제1101공병단</option>
+                    <option value = 061> 지상정보단</option>
+                    <option value = 062> 군사경찰단</option>
+                    <option value = 063> 근무지원단</option>
+                    <option value = 064> 항공단</option>
+                    <option value = 065> 방공단</option>
+                  </optgroup>
+                </select>              
+              </div>   
+            </div>  
+            <input type="submit" id="signup__submit"  value="회원가입">
+          </form>
+          <!--회원가입 끝-->
+          <!--로그인-->
+          <form action = "login_page" id="sign__signin"   method="POST">
+            <div class = "sign__row">
+              <label for="signin__id">아이디</label>
+              <input type="text" id="signin__id"/>
+            </div>
+            <div class = "sign__row">
+              <label for="signin__pw">비밀번호</label>
+              <input type="password" id="signin__pw" maxlength="15"/>
+            </div>
+            <a href="forget.html" id="forget">로그인 정보를 잊으셨습니까?</a>
+            <input type="submit" id="signin__submit" value="로그인">
+          </form>
+          <!--로그인 끝-->
+        </div>
+      </div>
+      <!--소개-->
+      <div class="index__first">
+        <div class="index__wrapper first">
+          <h1 class="index__firtitle">
+            '언택트'시대를 살아가는<br>모두를 위한 비대면 상담
+          </h1>
+          <div class="fir-1__wrapper">
+            <div class="fir-1__col">
+              <div class="fir-1__box">
+                <p class="fir-1">
+                  만날 수 없어도,<br><br>당신의 고민은 소중하니까.
+                </p>
+                <i class="fas fa-desktop"></i>
+              </div>
+            </div>
+            <div class="fir-2__col">
+              <div class="fir-2__box">
+                <img src="img/index_main_fir_001.png" id="fir-1__img"/>
+              </div>
+              <div class="fir-3__box">
+                <p class="fir-3">
+                  COVID-19로 인해 사람을<br>만나기 어려운 상황에서도<br>상담은 계속 되어야 합니다.<br><br>우리는 채팅, 음성, 영상 등<br>모든 기술을 동원하여 대면과<br>대등한 비대면을 구현합니다.
+                </p>
+              </div>           
+            </div>  
+          </div> 
+        </div>    
+      </div>
+      <div class="index__second">
+        <div class="index__wrapper second">
+          <img src="img/index_main_sec_001.png" id="sec-1__img"/>
+          <h1 class="index__sectitle">
+            더 빠르게, 더 편리하게.       
+          </h1>
+          <div class="sec-1__box">
+            <p class="sec-1">
+              얼굴을 마주 보며 주고 받는 대화는<br>이제 더 이상 최선의 방법이 아닙니다.<br>상담을 진행할 공간도, 따로 준비할 자료도 필요 없습니다.
+            </p>
+          </div>
+        </div>     
+      </div>
+      <div class="index__third">
+        <div class="index__wrapper third">
+          <div class="thi-1__wrapper">
+            <div class="thi-1__col">
+              <div class="thi-1__box box">
+                <i class="fas fa-user-secret"></i>
+                  <p class="thi-1">
+                    상담 과정 중의 모든 프라이버시가 보장됩니다.
+                  </p>
+                  <p class="thi-1_sub">
+                    철저히 비대면으로 진행되기 때문에 타인의 시선을 걱정 할 필요가 없습니다. 
+                  </p>
+              </div>
+              <div class="thi-2__box box">
+                <i class="fas fa-lock"></i>
+                  <p class="thi-2">
+                    상담 내용은 상담관과 상담자만이 열람할 수 있습니다.
+                  </p>
+                  <p class="thi-2_sub">
+                    이 서비스는 모든 데이터가 인쇄물과 같은<br>외부에 노출 될 수 있는 매체로 전환 될 수 없도록 제한합니다.
+                  </p>               
+              </div>
+              <div class="thi-3__box box">
+                <i class="fas fa-laptop-code"></i>
+                  <p class="thi-3">
+                    상담 이후, 필요한 모든 조치는 내부에서 이뤄집니다.
+                  </p>
+                  <p class="thi-3_sub">
+                    로그 조회 등의 기능을 통해 추가적으로 필요한<br>모든 조치를 앉아서 모두 해결 할 수 있습니다.
+                  </p>     
+              </div>
+            </div>
+            <div class="thi-2__col">
+              <h1 class="index__thititle">
+                <br>안심하고 아픔을<br>털어 놓을 수 있는 곳.       
+              </h1>
+              <input type="button" value="시작하기" id="backtoprime">
+            </div>  
+          </div>         
+        </div>
+      </div>
+      <!--소개 끝-->
+    </main>
+    <footer id="footer">
+      <div class="footer__wrapper">
+        <div class="footer__logo">
+          <h1 id="team__logo">
+            온실 속 돌멩이
+          </h1>
+        </div>
+        <div class="footer__info">
+          <p id="team__info">
+            국방 오픈소스 아카데미 해커톤 출품작<br>한준규 주세훈 신동현 강경태
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jQuery_3.5.1.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/index_signup.js"></script>
+    <script src="js/index_scroll.js"></script>
+  </body>
+</html>
