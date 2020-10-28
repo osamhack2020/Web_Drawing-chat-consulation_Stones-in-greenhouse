@@ -1,6 +1,6 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=135&section=header&text=&fontSize=90&fontAlignY=30&)
 
-<h1> <img src="./image_for_read-me/stone.png" width="40" height="40" /> 온실 속 돌멩이 </h1> 
+<h1> 온실 속 돌멩이 </h1> 
 
 
 <p align="center"><img src="./image_for_read-me/Drawing_gif.gif"/></p>
