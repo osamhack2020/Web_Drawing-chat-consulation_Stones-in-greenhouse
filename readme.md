@@ -12,7 +12,7 @@
 
 <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/Pj PPT-655ced?style=for-the-badge&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
 
-<h6> 버튼을 클릭하면 링크로 이동합니다. </h6>
+<p align = "center"> <h6> 버튼을 클릭하면 링크로 이동합니다. </h6> </p>
 
 
 ## Installation Process
