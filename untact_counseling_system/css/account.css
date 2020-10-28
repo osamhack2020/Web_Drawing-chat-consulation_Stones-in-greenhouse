@@ -1,0 +1,92 @@
+.vanish {
+    display: none;
+}
+
+.account__nav {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#account__back {
+    height: 40px;
+    width: 120px;
+    border: 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #5B86E5;
+    color: #fff;
+    outline: none;
+}
+
+@keyframes accountfadein {
+    0% {
+        opacity: 0%;
+        transform: translate(150%, 0);
+    }
+    100% {
+        opacity: 100%;
+        transform: translate(0%, 0);
+    }
+}
+
+#account {
+    width: 850px;
+    height: 550px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #e9f6fc;
+    animation: accountfadein 0.5s ease forwards;
+}
+
+.account__wrapper {
+    margin-top: 50px;
+}
+
+.account__wrapper > div, .account__wrapper p, .account__birth-mod, .account__affi-mod {
+    margin-bottom: 10px;
+}
+
+#account > .fa-user-circle {
+    position: absolute;
+    right: -2%;
+    bottom: -5%;
+    font-size: 400px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.name__label, .id__label, .pw__label, .birth__label, .affi__label {
+    font-size: 18px;
+    font-weight: 700;
+    opacity: 60%;
+}
+
+#account__pw, #account__pw-check, #account__birth-year, #account__birth-mon, #account__birth-day, .affi__wrapper select {
+    height: 25px;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    outline: none;
+}
+
+#account__submit, #birth__modify, #birth__modify-done, #affi__modify, #affi__modify-done {
+    height: 28px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    background-color: #5B86E5;
+    outline: none;
+}
