@@ -1,6 +1,6 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=135&section=header&text=&fontSize=90&fontAlignY=30&)
 
-<h1> 온실 속 돌멩이( 그림 그리는 비대면 웹 상담 서비스 ) </h1> 
+<h1> 온실 속 돌멩이( 그리는 상담 웹 서비스 ) </h1> 
 <h6> 버튼을 클릭하면 링크로 이동합니다. </h6>
 <p align="center"><img src="./image_for_read-me/stone.png"></p>
  
