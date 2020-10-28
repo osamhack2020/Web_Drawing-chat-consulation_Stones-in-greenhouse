@@ -3,7 +3,8 @@
 <h1> 온실 속 돌멩이</h1> 
 <h6> 그리는 상담 웹 서비스 </h6>
 <p align="center"><img src="./image_for_read-me/stone.png"></p>
-<p align="center"><img src="./Drawing_gif.gif"></p>
+<img src="./Drawing_gif.gif" width="160" height="90" />
+
 
 
  <p align = "center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/"><img src="http://img.shields.io/badge/Gitbook-655ced?style=for-the-badge&color=informational" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
