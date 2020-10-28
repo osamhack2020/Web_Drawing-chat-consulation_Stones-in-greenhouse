@@ -57,7 +57,7 @@ $ pip install -r requirements.txt
 <td style="text-align:left">must1080@naver.com</td>
 <td style="text-align:left"><a href="https://github.com/doongu">
 <img src="http://img.shields.io/badge/doongu-655ced?style=social&logo=github" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
-</a></td>
+</a></td> 
 </tr>
 <tr>
 <td style="text-align:left">Team</td>
