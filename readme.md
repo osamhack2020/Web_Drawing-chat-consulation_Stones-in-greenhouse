@@ -71,7 +71,7 @@ $ pip install -r requirements.txt
 <tr>
 <td style="text-align:left">Team</td>
 <td style="text-align:left">강경태</td>
-<td style="text-align:left">Frontend</td>
+<td style="text-align:left">Manager, Frontend</td>
 <td style="text-align:left">rkdrudxo@naver.com</td>
 <td style="text-align:left"><a href="https://github.com/Heuttun">
 <img src="http://img.shields.io/badge/Heuttun-655ced?style=social&logo=github&color=critical" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
