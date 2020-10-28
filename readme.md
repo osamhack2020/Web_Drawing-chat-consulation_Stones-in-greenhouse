@@ -3,7 +3,7 @@
 <h1> 온실 속 돌멩이</h1> 
 <h6> 그리는 상담 웹 서비스 </h6>
 <p align="center"><img src="./image_for_read-me/stone.png"></p>
-<img src="./image_for_read-me/Drawing_gif.gif"  />
+<p align="center"><img src="./image_for_read-me/Drawing_gif.gif"/></p>
 
 
 
