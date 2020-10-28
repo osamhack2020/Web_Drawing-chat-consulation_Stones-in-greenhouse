@@ -7,7 +7,7 @@
 
  <p align = "center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/"><img src="http://img.shields.io/badge/Gitbook-655ced?style=for-the-badge&color=informational" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
  
- <p align = "center"><a href="https://www.naver.com"><img src="http://img.shields.io/badge/Webpage-655ced?style=for-the-badge&color=critical" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
+ <p align = "center"><a href="http://stones-in-greenhouse.koreacentral.cloudapp.azure.com:8000/"><img src="http://img.shields.io/badge/Webpage-655ced?style=for-the-badge&color=critical" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
  
    <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/PJ Video-655ced?style=for-the-badge" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
 
