@@ -62,7 +62,7 @@ $ pip install -r requirements.txt
 <tr>
 <td style="text-align:left">Team</td>
 <td style="text-align:left">신동현</td>
-<td style="text-align:left">Frontend, </td>
+<td style="text-align:left">Frontend, Backend </td>
 <td style="text-align:left">donghyeonsheen@gmail.com</td>
 <td style="text-align:left"><a href="https://github.com/donghyeounsheen">
 <img src="http://img.shields.io/badge/donghyeounsheen-655ced?style=social&logo=github&color=informational" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
