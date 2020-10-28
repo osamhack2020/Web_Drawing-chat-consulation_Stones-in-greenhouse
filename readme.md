@@ -4,7 +4,6 @@
 <h6> 그리는 상담 웹 서비스 </h6>
 <p align="center"><img src="./image_for_read-me/stone.png"></p>
 
-<h6><p align = "center">  버튼을 클릭하면 링크로 이동합니다.  </p></h6>
 
  <p align = "center"><a href="https://stones-in-greenhouse.gitbook.io/army-web-service/"><img src="http://img.shields.io/badge/Gitbook-655ced?style=for-the-badge&color=informational" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
  
@@ -14,6 +13,7 @@
 
 <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/Pj PPT-655ced?style=for-the-badge&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
 
+<h6><p align = "center">  버튼을 클릭하면 링크로 이동합니다.  </p></h6>
 
 
 
