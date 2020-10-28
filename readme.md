@@ -47,7 +47,7 @@ $ pip install -r requirements.txt
 <th style="text-align:left">Position</th>
 <th style="text-align:left">E-Mail</th>
 <th style="text-align:left">Github</th>
-</tr>
+</tr> 
 </thead>
 <tbody>
 <tr>
