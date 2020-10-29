@@ -12,6 +12,30 @@
     </head>
     <body>
         <main id="chat">
+            <div id="chat__paint">
+                <canvas id="jsCanvas" class="canvas"></canvas>
+                <div class="controls">
+                    <div class="controls__range">
+                        <input type="range" id="jsRange" min="0.1" max="5.0" value="2.5" step="0.1">
+                    </div>
+                    <div class="controls__btns">
+                        <button id="jsMode">그리기</button>
+                        <button id="jsSend">전송</button>
+                        <button id="jsCancel">취소</button>
+                    </div>
+                    <div id="jsColors" class="controls__colors">
+                        <div class="controls__color jsColor" style="background-color:#2c2c2c"></div>
+                        <div class="controls__color jsColor" style="background-color:#ffffff"></div>
+                        <div class="controls__color jsColor" style="background-color:#ff3b30"></div>
+                        <div class="controls__color jsColor" style="background-color:#ff9500"></div>
+                        <div class="controls__color jsColor" style="background-color:#ffcc00"></div>
+                        <div class="controls__color jsColor" style="background-color:#4cd963"></div>
+                        <div class="controls__color jsColor" style="background-color:#5ac8fa"></div>
+                        <div class="controls__color jsColor" style="background-color:#0579ff"></div>
+                        <div class="controls__color jsColor" style="background-color:#5856d6"></div>
+                    </div>
+                </div>
+            </div>      
             <div class="chat__wrapper">
                 <div id="chat__sidemenu">
                     <div id="userinfo">
@@ -115,8 +139,10 @@
                         <div id="chat__mainmenu">
                             <!--채팅 중 각종 기능-->
                             <div id="mainmenu__wrapper">
-                                <!--기능 구분/ 선택자 분리-->
-
+                                <div class="chat__memo">
+                                    <textarea name="modal__text" id="memo" wrap="hard" required></textarea>
+                                </div>
+                                <button id="show__paint">그림 전송</button>
                             </div>
                         </div>
                     </div>
