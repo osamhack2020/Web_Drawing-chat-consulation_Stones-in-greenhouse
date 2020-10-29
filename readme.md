@@ -13,7 +13,7 @@
  
    <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/PJ Video-655ced?style=for-the-badge" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
 
-<p align = "center"><a href=https://drive.google.com/file/d/12wZI0lU9ltrsltkx_uiJ8q0HGTPdbZW9/view"><img src="http://img.shields.io/badge/Pj PPT-655ced?style=for-the-badge&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
+<p align = "center"><a href=https://drive.google.com/file/d/1IS48GscsnPJT_GpUclJND_JynEz4rLOz/view?usp=sharing"><img src="http://img.shields.io/badge/Pj PPT-655ced?style=for-the-badge&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
 
 <h6><p align = "center">  버튼을 클릭하면 링크로 이동합니다.  </p></h6>
 
