@@ -6,7 +6,7 @@ let jsonParsing;
 //수신 데이터
 
 let _message = {
-	'type': 'message',
+	'type': 'message', //message, paint
 	'message': 'test', //test, 삭제
     'opponent': 'group_name'
 }
@@ -154,8 +154,13 @@ function chatMessage(para) { //수신 데이터 분별 및 함수 호출
 		    turnReady();
 		    break;
         case 'message':
-            printReceive(jsonParsing.message);
-            break;
+            if (jsonParsing.type == 'message') {
+                printReceive(jsonParsing.message);
+                break;
+            }
+            else {
+                printReceivePaint(jsonParsing.message);
+            }
         case 'message_is_delivered':
             sendComplete();
             break;
@@ -271,10 +276,30 @@ function printReceive(message) { //수신 메시지 출력
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+function printReceivePaint(message) { //그림 수신 메시지 출력
+    let contentBox = document.createElement('div');
+    let content = document.createElement('img');
+    content.src = message;
+    contentBox.classList.add('chats__block-receive');
+    contentBox.appendChild(content);
+    chatBox.appendChild(contentBox);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
 function printSend(message) { //발신 메시지 출력
     let contentBox = document.createElement('div');
     let content = document.createElement('p');
     content.innerHTML = message;
+    contentBox.classList.add('chats__block-send');
+    contentBox.appendChild(content);
+    chatBox.appendChild(contentBox);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function printSendPaint(message) { //그림 발신 메시지 출력
+    let contentBox = document.createElement('div');
+    let content = document.createElement('img');
+    content.src = message;
     contentBox.classList.add('chats__block-send');
     contentBox.appendChild(content);
     chatBox.appendChild(contentBox);
@@ -329,6 +354,141 @@ function chatsend() { //입력 메시지 발신
             ws.send(jsonContent);
         }
     } 
+}
+
+function sendPaint(para) { //그림 메시지 발신
+    if (!connectFlag) {
+        printReceive('상담 연결이 되지 않았습니다.<br>상단 우측의 상담 시작 버튼을 눌러 상담을 시작해주세요.');
+    }
+    else {
+        _message.type = 'paint';
+        _message.message = para;
+        jsonContent = JSON.stringify(_message);
+        console.log(jsonContent);
+        printSendPaint(para);
+        ws.send(jsonContent);
+    }
+}
+
+//그림 전송
+
+const canvas = document.getElementById("jsCanvas");
+const ctx = canvas.getContext("2d");
+const colors = document.getElementsByClassName("jsColor");
+const range = document.getElementById("jsRange");
+const mode = document.getElementById("jsMode");
+const send = document.getElementById("jsSend");
+const cancel = document.getElementById("jsCancel");
+const show = document.getElementById("show__paint");
+
+const INITIAL_COLOR = "#2c2c2c";
+const CANVAS_SIZE = "500";
+
+let paintPage = document.getElementById("chat__paint");
+
+canvas.width = CANVAS_SIZE;
+canvas.height = CANVAS_SIZE;
+
+ctx.fillStyle = "#ffffff";
+ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+ctx.strokeStyle = INITIAL_COLOR
+ctx.fillStyle = INITIAL_COLOR
+ctx.lineWidth = 2.5;
+
+let painting = false;
+let filling = false;
+
+function stopPainting(){
+    painting = false;
+}
+
+function startPainting(){
+    painting = true;
+}
+
+function onMouseMove(event){
+    const x = event.offsetX;
+    const y = event.offsetY;
+    if(!painting){
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+    } else{
+        ctx.lineTo(x, y);
+        ctx.stroke();
+    }
+}
+
+function handleColorClick(event){
+    const color = event.target.style.backgroundColor;
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+}
+
+function handleRangeChange(event){
+    const size = event.target.value;
+    ctx.lineWidth = size;
+}
+
+function handleModeClick(){
+    if(filling === true){
+        filling = false;
+        mode.innerText = "그리기";
+    } else {
+        filling = true;
+        mode.innerText = "채우기";
+    }
+}
+
+function handleCanvasClick(){
+    if (filling){
+        ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+    } else {
+
+    }
+}
+
+function handleSendClick(){
+    paintPage.removeAttribute('class');
+    let printData = canvas.toDataURL();
+    sendPaint(printData);
+}
+
+function handleCancelClick(){
+    paintPage.removeAttribute('class');
+}
+
+function handleShowClick(){
+    paintPage.classList.add('paint__show')
+}
+
+if (canvas) {
+    canvas.addEventListener("mousemove", onMouseMove);
+    canvas.addEventListener("mousedown", startPainting);
+    canvas.addEventListener("mouseup", stopPainting);
+    canvas.addEventListener("mouseleave", stopPainting);
+    canvas.addEventListener("click", handleCanvasClick);
+}
+
+Array.from(colors).forEach(color => color.addEventListener("click", handleColorClick));
+
+if(range){
+    range.addEventListener("input", handleRangeChange);
+}
+
+if(mode){
+    mode.addEventListener("click", handleModeClick);
+}
+
+if(send){
+    send.addEventListener("click", handleSendClick);
+}
+
+if(cancel){
+    cancel.addEventListener("click", handleCancelClick);
+}
+
+if(show){
+    show.addEventListener("click", handleShowClick);
 }
 
 //로그 조회 데모
