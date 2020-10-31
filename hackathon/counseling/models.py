@@ -28,6 +28,6 @@ class User(AbstractUser):
     )
     birthday = models.DateField(null=True, blank=True)
     company = models.CharField(max_length=150, null=True, blank=True)
-    code = models.IntegerField(choices=Code.choices, null=True, blank=True)
+    code = models.IntegerField(choices=Code.choices, default=1)
     status = models.IntegerField(choices=Status.choices, default=2)
-    role = models.IntegerField(choices=Role.choices, null=True, blank=True)
+    role = models.IntegerField(choices=Role.choices, default=1)

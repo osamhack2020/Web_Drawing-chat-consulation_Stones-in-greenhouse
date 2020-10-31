@@ -1,0 +1,33 @@
+{% load inlinecss %}
+
+{% inlinecss "email.css" %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Email</title>
+
+    </head>
+    <body >
+        <div class="mail__container">
+            <div class="title">
+                <h1 class="mail__title">
+                    "비대면 상담 체계" 서비스 회원가입 이메일 인증이 요청되었습니다.
+                </h1>
+                
+            </div>
+            <div class="p">
+                <p class="mail__p">
+                    {{ email }} 을 사용해 회원가입을 신청하신 것이 맞다면<br>아래의 "인증 완료" 버튼을 눌러 회원가입을 완료해주세요!
+                </p>
+            </div>
+            <a id = "mail__submit" href = " http://stones-in-greenhouse.koreacentral.cloudapp.azure.com:8000{% url 'email_activate' token=token %} ">인증 완료</a>
+            
+        
+        </div>
+    </body>
+</html>
+
+{% endinlinecss %}

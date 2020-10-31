@@ -6,7 +6,7 @@ let jsonParsing;
 //수신 데이터
 
 let _message = {
-	'type': 'message', //message, paint
+	'type': 'message',
 	'message': 'test', //test, 삭제
     'opponent': 'group_name'
 }
@@ -138,7 +138,6 @@ function chatWS() { //연결
 
 function chatMessage(para) { //수신 데이터 분별 및 함수 호출
     jsonParsing = JSON.parse(para.data);
-	console.log(jsonParsing)
     switch(jsonParsing.type) {
         case 'apply':
             receiveApp(jsonParsing);
@@ -154,13 +153,10 @@ function chatMessage(para) { //수신 데이터 분별 및 함수 호출
 		    turnReady();
 		    break;
         case 'message':
-            if (jsonParsing.type == 'message') {
-                printReceive(jsonParsing.message);
-                break;
-            }
-            else {
-                printReceivePaint(jsonParsing.message);
-            }
+            printReceive(jsonParsing.message);
+            break;
+        case 'paint':
+            printReceivePaint(jsonParsing.message);
         case 'message_is_delivered':
             sendComplete();
             break;
@@ -175,7 +171,6 @@ function chatMessage(para) { //수신 데이터 분별 및 함수 호출
 
 function sendState() {
     jsonContent = JSON.stringify(state);
-    console.log(jsonContent);
     ws.send(state);
 }
 
@@ -215,7 +210,6 @@ function turnIng() {
 
 function receiveApp(info) { //상담 정보 모달
     turnIng();
-	console.log(info)
     let modalInfoBox = document.createElement('p');
     let modalReceiveBox = document.createElement('p');
     chatModal.removeAttribute('class'); //모달 페이지 출력
@@ -277,6 +271,7 @@ function printReceive(message) { //수신 메시지 출력
 }
 
 function printReceivePaint(message) { //그림 수신 메시지 출력
+    console.log(message)
     let contentBox = document.createElement('div');
     let content = document.createElement('img');
     content.src = message;
@@ -364,7 +359,6 @@ function sendPaint(para) { //그림 메시지 발신
         _message.type = 'paint';
         _message.message = para;
         jsonContent = JSON.stringify(_message);
-        console.log(jsonContent);
         printSendPaint(para);
         ws.send(jsonContent);
     }

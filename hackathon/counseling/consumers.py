@@ -9,16 +9,19 @@ from django.shortcuts import get_object_or_404
 class ChatConsumer(WebsocketConsumer):
     def connect(self):
         user = self.scope['user']
+        _user = str(user)
         if user.is_authenticated:
             async_to_sync(self.channel_layer.group_add)(
-                str(user),
+                str(_user),
                 self.channel_name
             )
             self.accept()
 
     def disconnect(self, close_code):
+        user = self.scope['user']
+        _user = str(user)
         async_to_sync(self.channel_layer.group_discard)(
-            str(self.scope['user']),
+            _user,
             self.channel_name
         )
 
@@ -70,6 +73,14 @@ class ChatConsumer(WebsocketConsumer):
                     "type": "exit"
                 },
             )
+        elif _type == 'paint':
+            async_to_sync(self.channel_layer.group_send)(
+                str(user.counseler),
+                {
+                    "type": "paint",
+                    "message": data['message'],
+                },
+            )
 
     def apply(self, event):
         application = event['application']
@@ -91,4 +102,9 @@ class ChatConsumer(WebsocketConsumer):
         self.send(text_data=json.dumps({
             'type': 'accept',
             'class': 'exit'
+        }))
+    def paint(self, event):
+        self.send(text_data=json.dumps({
+            'type':'paint',
+            'message': event['message']
         }))

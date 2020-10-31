@@ -1,12 +1,14 @@
-/* email.css */
-
 * {
     box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
 }
 
 .mail__container {
     width: 700px;
-    height: 500px;
+    height: 900px;
     margin: 0 auto;
     margin-top: 50px;
     padding: 30px;
@@ -36,7 +38,7 @@
 }
 
 #mail__redirect {
-    margin-top: 50px;
+    margin-top: 300px;
 }
 
 #mail__submit {
@@ -44,9 +46,11 @@
     width: 120px;
     border: 0;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 18px;
     font-weight: 700;
     color: #464646;
     background-color: rgba(255, 255, 255, 0.7);
-    outline: none;
 }
