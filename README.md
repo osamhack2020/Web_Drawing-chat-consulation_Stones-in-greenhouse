@@ -96,6 +96,6 @@ $ pip install -r requirements.txt
 
 
 ![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=135&section=footer&fontSize=90)
-
+  
 
 
