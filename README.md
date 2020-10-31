@@ -29,8 +29,7 @@ $ pip install -r requirements.txt
 ## 프로젝트 사용법 (Getting Started)
  
 
-- [x] 채팅하는 서비스이기 때문에 다른 IP의 PC 두 대를 이용해야 합니다.
-- [x] 예를 들어 A라는 부대로 회원가입을 했다면, A 부대에 근무하는 상담관의 아이디로 로그인해야 TEST가 가능합니다.
+- [x] Test ID와 PW를 명시해 놓았으니, 두 개의 브라우져를 이용해 내담자와 상담관으로 사용해보시면 됩니다.
 - [x] redis-6.0.8 설치 필요
 - [x] 실행 전 makemigrations 및 migrate 필요
 - [x] 외부 접속을 위해 ALLOWED_HOSTS 설정 
