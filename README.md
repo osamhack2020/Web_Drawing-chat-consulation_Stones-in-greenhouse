@@ -39,7 +39,7 @@ $ pip install -r requirements.txt
 <br></br>
 
 
-<h2> Team Information <a href="https://github.com/osamhack2020/Web_Drawing-Chat-consulation_Stones-in-greenhouse/LICENSE.md"><img alt="GitHub" src="https://img.shields.io/github/license/osamhack2020/Web_Chat-consulation_Stones-in-greenhouse"></a></h2>
+<h2> Team Information <a href="https://github.com/osamhack2020/Web_Drawing-chat-consulation_Stones-in-greenhouse/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/osamhack2020/Web_Chat-consulation_Stones-in-greenhouse"></a></h2>
 
 <!--  아래는 Team INFORMATION 표-->
  
