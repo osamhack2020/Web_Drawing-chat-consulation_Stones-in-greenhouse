@@ -88,8 +88,6 @@ $ pip install -r requirements.txt
 <td style="text-align:left">fjdksl546@gmail.com</td>
 <td style="text-align:left"><a href="https://github.com/fjdksl546">
 <img src="http://img.shields.io/badge/fjdksl546-655ced?style=social&logo=github&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
-</a><a href="https://github.com/SAE-HUN">
-<img src="http://img.shields.io/badge/SAE_HUN-655ced?style=social&logo=github&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
 </a></td>
 </tr>
 </tbody>
