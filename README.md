@@ -11,7 +11,7 @@
  
  <p align = "center"><a href="http://stones-in-greenhouse.koreacentral.cloudapp.azure.com:8000/"><img src="http://img.shields.io/badge/Webpage-655ced?style=for-the-badge&color=critical" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
  
-   <p align = "center"><a href="https://www.youtube.com/"><img src="http://img.shields.io/badge/PJ Video-655ced?style=for-the-badge" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
+   <p align = "center"><a href="https://drive.google.com/file/d/13y29kriEMJK2RZBQexBCQpG-MjAEqiSS/view?usp=sharing"><img src="http://img.shields.io/badge/PJ Video-655ced?style=for-the-badge" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
 
 <p align = "center"><a href=https://drive.google.com/file/d/1IS48GscsnPJT_GpUclJND_JynEz4rLOz/view?usp=sharing"><img src="http://img.shields.io/badge/Pj PPT-655ced?style=for-the-badge&color=important" style="height : auto; margin-left : 10px; margin-right : 10px;"/></a> </p>
 
